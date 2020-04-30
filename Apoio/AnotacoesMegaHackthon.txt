@@ -1,0 +1,98 @@
+caueobuck@gmail.com Caue
+jeugenio25@gmail.com JOrge
+pedro.ideasfor@gmail.com Pedro
+vitinho.baptista@gmail.com Vitor
+
+1 - Você usa algum produto globo? Qual?
+
+2 - Você consome mais de um serviço globo?Quais?(Ex: globo Play, G1, Gshow)
+
+3 - Gostaria de ter um único aplicativo que centralize os conteúdos de todos ou produtos globo que consome?
+
+4 - O que mais gostaria que constasse nesse aplicativo?
+
+5 - Qual sua faixa etária?
+
+
+
+1 - Você utiliza um produto digital da Rede Globo?
+- Sim
+- Não
+
+2 - Selecione abaixo os serviços que consome: 
+- Globo Play
+- G1
+- Gshow
+- Globo Esporte
+- Bem Estar
+- Cartola
+....
+
+3 - Você enfrenta alguma dificuldade ao utilizar os serviços?
+- Sim (Qual?)
+- Não
+
+4 - Qual é a forma que você consome esses serviços?
+
+5 - Selecione a faixa etária correspondente a sua:
+
+Listar os grupos de idade
+
+6 - O que sente falta quando acaba de consumir um conteúdo Globo?
+
+--------------------------------
+
+
+
+
+https://docs.google.com/forms/u/0/d/e/1FAIpQLSf7F9u4_zdJkT1IQSdsxts1xcMyf5gms5zUy8yQEap3TQXTug/formResponse
+
+
+1 - Protótipo - Caue 
+2 - Documentação (Negócio e Técnico , vídeo, slide) -- Lista de opções de gostos e um check se deseja usar a inteligência artificial. Vito e Pedro
+3 - Poc - Aplicativo Android (APK, Back , Banco) -- Jorge e Pedro
+4 - Teste 
+
+
+
+
+Enviar pro Caue
+
+O máximo de explicação sobre o projeto:
+
+
+Implementar todas as funcionalidades e conteúdos dos diversos app em um um só , 
+sendo controlado por planos de assinatura mensais.Neste app, o cliente teria acesso a diversos conteúdos (BBB, Produtos da Globo Play, Globo Esporte, Sinal de TV aberta), 
+isso tudo em um único lugar, evitando o monte de cadastros e aplicativos pra usar.
+
+Lista de opções de gostos e um check se deseja usar a inteligência artificial.
+
+Criaremos um aplicativo de celular que irá conter todo o conteúdo da globo. A medida que se for usando, 
+o aplicativo irá organizar o conteúdo de acordo com suas preferências.
+
+--------------------------------
+
+
+Gmail:
+E-mail: megahacktime@gmail.com
+senha: 259187@je
+
+GITHUB
+megahacktime@gmail.com
+259187@je
+
+
+
+https://github.com/
+Repositório: https://github.com/megahacktime/Time30.git
+
+
+
+
+
+
+
+ 
+
+ 
+
