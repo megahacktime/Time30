@@ -136,7 +136,24 @@ values(8, 'Duque de Caxias', 33);
 insert into TbUsuarios(Usuario_id , Usuario_Categoria_id , 
 Usuario_Cidade_id, Usuario_Nome ,Usuario_Email , Usuario_Senha , Usuario_cep,
 Usuario_admin , Usuario_DataDeNascimento)
-values(1, 1, 2, 'Jorge Eugenio', 'jeugenio25@gmail.com','1234','25561203')
+values(1, 1, 2, 'Jorge Eugenio', 'jeugenio25@gmail.com','1234','25561203', 1, '1988-10-30');
+
+insert into TbUsuarios(Usuario_id , Usuario_Categoria_id , 
+Usuario_Cidade_id, Usuario_Nome ,Usuario_Email , Usuario_Senha , Usuario_cep,
+Usuario_admin , Usuario_DataDeNascimento)
+values(2, 1, 3, 'Pedro Junior', 'pedro.ideasfor@gmail.com','1234','26110335' , 1, '1988-10-30');
+
+insert into TbUsuarios(Usuario_id , Usuario_Categoria_id , 
+Usuario_Cidade_id, Usuario_Nome ,Usuario_Email , Usuario_Senha , Usuario_cep,
+Usuario_admin , Usuario_DataDeNascimento)
+values(3, 1, 6, 'Vitor Batista', 'vitinho.baptista@gmail.com','1234','25015190', 1, '1988-10-30');
+
+
+insert into TbUsuarios(Usuario_id , Usuario_Categoria_id , 
+Usuario_Cidade_id, Usuario_Nome ,Usuario_Email , Usuario_Senha , Usuario_cep,
+Usuario_admin , Usuario_DataDeNascimento)
+values(4, 1, 7, 'Fernando Ferreira', 'fernando@embratecc.com.br','1234','26221010', 1, '1988-10-30');
+
 
 
 
