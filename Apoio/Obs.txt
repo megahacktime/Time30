@@ -1,0 +1,20 @@
+
+Gmail:
+E-mail: megahacktime@gmail.com
+senha: 259187@je
+
+GITHUB
+megahacktime@gmail.com
+259187@je
+
+
+
+GITHUB
+Repositório: https://github.com/megahacktime/Time30.git
+megahacktime@gmail.com
+259187@je
+
+Banco:  jeugenio25_MegaTime30
+Host: robb0525.locaweb.com.br:3306
+User: jeuge_MegaTime30
+senha: 9w?98iGw
