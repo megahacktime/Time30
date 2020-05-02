@@ -1,0 +1,43 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ideas" GeneratedClassName="IdeasConfig">
+  <Profiles />
+  <Settings>
+    <Setting Name="MySQL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">server=robb0525.locaweb.com.br; user id=jeuge_arkDw; password=j26ve@K4;database=jeugenio25_arkDw;</Value>
+    </Setting>
+    <Setting Name="MsSQL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">server=LOCALHOST\MSSQLSERVER2014; user id=sa; password=emb159753;database=IdeasPDV_debug
+</Value>
+    </Setting>
+    <Setting Name="GoogleGcmApiKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AIzaSyDdU9fdB9MY7GuP0fTwkPB8fBDmnGuMkSM</Value>
+    </Setting>
+    <Setting Name="GoogleGcmDeviceKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">dy4dnal0INg:APA91bEQ5q6sshpPXYcmrdPbDu83uw1AxsvU4sqcUptzNP_WSDx2L-fDMoeBwT7AG9nc1sKv6ihQYce5jCPNsUzjWhVLvSd7vSk92wftefhZF8rc4al43HjoN1hZj0Bn8_WiUBHDfvqj</Value>
+    </Setting>
+    <Setting Name="MsSqlLocalDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=#path#PDVClient.mdf;Integrated Security=True;Connect Timeout=30</Value>
+    </Setting>
+    <Setting Name="SmtpHost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">smtp.ideasfor.com.br</Value>
+    </Setting>
+    <Setting Name="SmtpUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">smtp@ideasfor.com.br</Value>
+    </Setting>
+    <Setting Name="SmtpPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">smtp@2018</Value>
+    </Setting>
+    <Setting Name="SmtpSSL" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SmtpPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="SmtpSender" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">site@ideasfor.com.br</Value>
+    </Setting>
+    <Setting Name="SharedKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">682ecee9ace6d963925816479b1277b4</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
