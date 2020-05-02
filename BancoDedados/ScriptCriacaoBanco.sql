@@ -1,10 +1,10 @@
-DROP TABLE IF EXISTS Tbbuscacampos;
-
 DROP TABLE IF EXISTS TbLogUso;
 
-DROP TABLE IF EXISTS TbConteudo;
-
 DROP TABLE IF EXISTS TbUsuarios;
+
+DROP TABLE IF EXISTS Tbbuscacampos;
+
+DROP TABLE IF EXISTS TbConteudo;
 
 DROP TABLE IF EXISTS TbMenu;
 
@@ -194,37 +194,6 @@ INDEX TbMenu_FKIndex30(Menu_Perfil_Id),
       ON UPDATE NO ACTION);
 
 
-CREATE TABLE TbUsuarios (
-  Usuario_id INTEGER UNSIGNED  NOT NULL   AUTO_INCREMENT,
-  Usuario_Perfil_Id INTEGER UNSIGNED  NULL  ,
-  Usuario_Categoria_id INTEGER UNSIGNED  NULL  ,
-  Usuario_Cidade_id INTEGER UNSIGNED  NULL  ,
-  Usuario_Nome VARCHAR(150)  NULL  ,
-  Usuario_Email VARCHAR(100)  NULL  ,
-  Usuario_Senha VARCHAR(50)  NULL  ,
-  Usuario_ativo BIT  NULL DEFAULT 1 ,
-  _deleted_ BIT  NULL DEFAULT 0 ,
-  Usuario_cep VARCHAR(20)  NULL  ,
-  Usuario_UsarIA BIT  NULL DEFAULT 1 ,
-  Usuario_DataDeNascimento DATETIME  NULL    ,
-PRIMARY KEY(Usuario_id)  ,
-INDEX TbUsuarios_FKIndex1(Usuario_Cidade_id)  ,
-INDEX TbUsuarios_FKIndex2(Usuario_Categoria_id)  ,
-INDEX TbUsuarios_FKIndex3(Usuario_Perfil_Id),
-  FOREIGN KEY(Usuario_Cidade_id)
-    REFERENCES TbCidades(Cidade_id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-  FOREIGN KEY(Usuario_Categoria_id)
-    REFERENCES TbCategorias(Categoria_id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-  FOREIGN KEY(Usuario_Perfil_Id)
-    REFERENCES TbPerfis(Perfil_Id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION);
-
-
 CREATE TABLE TbConteudo (
   Conteudo_id INTEGER UNSIGNED  NOT NULL   AUTO_INCREMENT,
   Conteudo_dataFimExibicao DATETIME  NOT NULL  ,
@@ -254,37 +223,6 @@ INDEX TbConteudo_FKIndex3(Conteudo_Cidade_id),
       ON UPDATE NO ACTION,
   FOREIGN KEY(Conteudo_Cidade_id)
     REFERENCES TbCidades(Cidade_id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION);
-
-
-CREATE TABLE TbLogUso (
-  LogUso_id INTEGER UNSIGNED  NOT NULL   AUTO_INCREMENT,
-  LogUso_Usuario_id INTEGER UNSIGNED  NOT NULL  ,
-  LogUso_Conteudo_id INTEGER UNSIGNED  NULL  ,
-  LogUso_Produto_id INTEGER UNSIGNED  NULL  ,
-  LogUso_Categoria_id INTEGER UNSIGNED  NULL  ,
-  LogUso_DataGravacao DATETIME  NULL DEFAULT current_timestamp() ,
-  _deleted_ BIT  NULL DEFAULT 0   ,
-PRIMARY KEY(LogUso_id)  ,
-INDEX TbLogUso_FKIndex1(LogUso_Categoria_id)  ,
-INDEX TbLogUso_FKIndex2(LogUso_Produto_id)  ,
-INDEX TbLogUso_FKIndex3(LogUso_Conteudo_id)  ,
-INDEX TbLogUso_FKIndex4(LogUso_Usuario_id),
-  FOREIGN KEY(LogUso_Categoria_id)
-    REFERENCES TbCategorias(Categoria_id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-  FOREIGN KEY(LogUso_Produto_id)
-    REFERENCES TbProdutos(Produto_id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-  FOREIGN KEY(LogUso_Conteudo_id)
-    REFERENCES TbConteudo(Conteudo_id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-  FOREIGN KEY(LogUso_Usuario_id)
-    REFERENCES TbUsuarios(Usuario_id)
       ON DELETE NO ACTION
       ON UPDATE NO ACTION);
 
@@ -329,6 +267,80 @@ INDEX Tbbuscacampos_FKIndex40(BuscaCampo_ControleHTML_id),
       ON UPDATE NO ACTION,
   FOREIGN KEY(BuscaCampo_ControleHTML_id)
     REFERENCES TbControleHTML(ControleHTML_id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION);
+
+
+CREATE TABLE TbUsuarios (
+  Usuario_id INTEGER UNSIGNED  NOT NULL   AUTO_INCREMENT,
+  Usuario_Produto_id3 INTEGER UNSIGNED  NOT NULL DEFAULT 3 ,
+  Usuario_Produto_id2 INTEGER UNSIGNED  NOT NULL DEFAULT 2 ,
+  Usuario_Produto_id1 INTEGER UNSIGNED  NOT NULL DEFAULT 1 ,
+  Usuario_Perfil_Id INTEGER UNSIGNED  NULL  ,
+  Usuario_Cidade_id INTEGER UNSIGNED  NULL  ,
+  Usuario_Nome VARCHAR(150)  NULL  ,
+  Usuario_Email VARCHAR(100)  NULL  ,
+  Usuario_Senha VARCHAR(50)  NULL  ,
+  Usuario_ativo BIT  NULL DEFAULT 1 ,
+  _deleted_ BIT  NULL DEFAULT 0 ,
+  Usuario_cep VARCHAR(20)  NULL  ,
+  Usuario_UsarIA BIT  NULL DEFAULT 1 ,
+  Usuario_DataDeNascimento DATETIME  NULL    ,
+PRIMARY KEY(Usuario_id)  ,
+INDEX TbUsuarios_FKIndex1(Usuario_Cidade_id)  ,
+INDEX TbUsuarios_FKIndex3(Usuario_Perfil_Id)  ,
+INDEX TbUsuarios_FKIndex6(Usuario_Produto_id1)  ,
+INDEX TbUsuarios_FKIndex4(Usuario_Produto_id2)  ,
+INDEX TbUsuarios_FKIndex5(Usuario_Produto_id3),
+  FOREIGN KEY(Usuario_Cidade_id)
+    REFERENCES TbCidades(Cidade_id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(Usuario_Perfil_Id)
+    REFERENCES TbPerfis(Perfil_Id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(Usuario_Produto_id1)
+    REFERENCES TbProdutos(Produto_id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(Usuario_Produto_id2)
+    REFERENCES TbProdutos(Produto_id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(Usuario_Produto_id3)
+    REFERENCES TbProdutos(Produto_id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION);
+
+
+CREATE TABLE TbLogUso (
+  LogUso_id INTEGER UNSIGNED  NOT NULL   AUTO_INCREMENT,
+  LogUso_Usuario_id INTEGER UNSIGNED  NOT NULL  ,
+  LogUso_Conteudo_id INTEGER UNSIGNED  NULL  ,
+  LogUso_Produto_id INTEGER UNSIGNED  NULL  ,
+  LogUso_Categoria_id INTEGER UNSIGNED  NULL  ,
+  LogUso_DataGravacao DATETIME  NULL DEFAULT current_timestamp() ,
+  _deleted_ BIT  NULL DEFAULT 0   ,
+PRIMARY KEY(LogUso_id)  ,
+INDEX TbLogUso_FKIndex1(LogUso_Categoria_id)  ,
+INDEX TbLogUso_FKIndex2(LogUso_Produto_id)  ,
+INDEX TbLogUso_FKIndex3(LogUso_Conteudo_id)  ,
+INDEX TbLogUso_FKIndex4(LogUso_Usuario_id),
+  FOREIGN KEY(LogUso_Categoria_id)
+    REFERENCES TbCategorias(Categoria_id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(LogUso_Produto_id)
+    REFERENCES TbProdutos(Produto_id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(LogUso_Conteudo_id)
+    REFERENCES TbConteudo(Conteudo_id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(LogUso_Usuario_id)
+    REFERENCES TbUsuarios(Usuario_id)
       ON DELETE NO ACTION
       ON UPDATE NO ACTION);
 

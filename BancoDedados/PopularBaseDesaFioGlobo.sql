@@ -133,9 +133,14 @@ INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('2', '1', '3', 'Senha', 'Usuario_Senha', 0); 
 
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_FonteDados` , `BuscaCampo_Echave`) VALUES ('4', '1', '3', 'Perfil', 'Usuario_Perfil_id', ' select Perfil_id , Perfil_Descricao from  TbPerfis where _deleted_ = 0 ',  0); 
-INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_FonteDados` , `BuscaCampo_Echave`) VALUES ('4', '1', '3', 'Categoria', 'Usuario_Categoria_id', ' select Categoria_id  ,  Categoria_Nome from   TbCategorias where _deleted_ = 0 ',  0); 
-INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_FonteDados` , `BuscaCampo_Echave`) VALUES ('4', '1', '3', 'Cidade', 'Usuario_Cidade_id', ' select  Cidade_id ,  Cidade_Nome from   TbCidades where _deleted_ = 0 ',  0); 
 
+
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_FonteDados` , `BuscaCampo_Echave`) VALUES ('4', '1', '3', 'Produto de Preferência 1', 'Usuario_Produto_id1', ' select Produto_id  ,  Produto_Nome from   TbProdutos where _deleted_ = 0 ',  0); 
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_FonteDados` , `BuscaCampo_Echave`) VALUES ('4', '1', '3', 'Produto de Preferência 1', 'Usuario_Produto_id2', ' select Produto_id  ,  Produto_Nome from   TbProdutos where _deleted_ = 0 ',  0); 
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_FonteDados` , `BuscaCampo_Echave`) VALUES ('4', '1', '3', 'Produto de Preferência 1', 'Usuario_Produto_id3', ' select Produto_id  ,  Produto_Nome from   TbProdutos where _deleted_ = 0 ',  0); 
+
+
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_FonteDados` , `BuscaCampo_Echave`) VALUES ('4', '1', '3', 'Cidade', 'Usuario_Cidade_id', ' select  Cidade_id ,  Cidade_Nome from   TbCidades where _deleted_ = 0 ',  0); 
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('5', '1', '3', 'Ativo', 'Usuario_ativo', b'0');
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('5', '1', '3', 'Usar IA', 'Usuario_UsarIA', b'0');
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`,  `BuscaCampo_Mascara`  ) VALUES ('6', '3', '3', 'Data de Nascimento', 'Usuario_DataDeNascimento', 0, '' );
@@ -196,7 +201,7 @@ INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_BuscaTabela_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('1', '1', '6', 'Nome', 'Conteudo_Nome', b'1');
 
 -- Cadastro de Conteúdo Menu
-INSERT INTO `jeugenio25_MegaTime30`.`TbMenu` (`Menu_BuscaTabela_id`, `Menu_Descricao`, `Menu_Principal`, `_deleted_`, `Menu_Ordem`, `Menu_ClasseIcone` , `Menu_Menu_id`    ) VALUES (4, 'Cadastro de Categorias', 0, 0, 1, 'glyphicon glyphicon-th',2 );
+INSERT INTO `jeugenio25_MegaTime30`.`TbMenu` (`Menu_BuscaTabela_id`, `Menu_Descricao`, `Menu_Principal`, `_deleted_`, `Menu_Ordem`, `Menu_ClasseIcone` , `Menu_Menu_id`    ) VALUES (6, 'Cadastro de Conteúdo', 0, 0, 1, 'glyphicon glyphicon-th',2 );
 
 -- Cadastro de Conteúdo Formulário
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscaformularios` (`BuscaFormulario_BuscaTabela_id`,   `BuscaFormulario_tabela`, `BuscaFormulario_Descricao`) VALUES ('6',   'TbConteudo', 'Edição de Conteúdo');
@@ -227,10 +232,10 @@ INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscatabelas` (`BuscaTabela_Perfil_Id`, `
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_BuscaTabela_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('1', '1', '7', 'Código', 'Cidade_id', b'1');
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_BuscaTabela_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('1', '1', '7', 'Cidade', 'Cidade_Nome', b'1');
 
--- Cadastro de Categorias Menu
+-- Cadastro de Cidades Menu
 INSERT INTO `jeugenio25_MegaTime30`.`TbMenu` (`Menu_BuscaTabela_id`, `Menu_Descricao`, `Menu_Principal`, `_deleted_`, `Menu_Ordem`, `Menu_ClasseIcone` , `Menu_Menu_id`    ) VALUES (7, 'Cadastro de Cidades', 0, 0, 1, 'glyphicon glyphicon-th',2 );
 
--- Cadastro de Categorias Formulário
+-- Cadastro de Cidades Formulário
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscaformularios` (`BuscaFormulario_BuscaTabela_id`,   `BuscaFormulario_tabela`, `BuscaFormulario_Descricao`) VALUES ('7',   'TbCidades', 'Edição Cidades');
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`, `BuscaCampo_Disabled` ) VALUES ('1', '1', '7', 'Código', 'Cidade_id', 1, 1);
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('2', '1', '7', 'Nome', 'Cidade_Nome', 0);
@@ -379,26 +384,33 @@ insert into TbCidades(Cidade_id, Cidade_Nome, Cidade_Estado_id)
 values(8, 'Duque de Caxias', 33);
 
 -- Usuarios
-insert into TbUsuarios(Usuario_id , Usuario_Categoria_id , 
+insert into TbUsuarios(Usuario_id ,  
 Usuario_Cidade_id, Usuario_Nome ,Usuario_Email , Usuario_Senha , Usuario_cep,
  Usuario_DataDeNascimento, Usuario_Perfil_Id)
-values(1, 1, 2, 'Jorge Eugenio', 'jeugenio25@gmail.com','1234','25561203',  '1988-10-30', 1);
+values(1,  2, 'Jorge Eugenio', 'jeugenio25@gmail.com','1234','25561203',  '1988-10-30', 1);
 
-insert into TbUsuarios(Usuario_id , Usuario_Categoria_id , 
+insert into TbUsuarios(Usuario_id ,  
 Usuario_Cidade_id, Usuario_Nome ,Usuario_Email , Usuario_Senha , Usuario_cep,
  Usuario_DataDeNascimento, Usuario_Perfil_Id)
-values(2, 1, 3, 'Pedro Junior', 'pedro.ideasfor@gmail.com','1234','26110335' ,  '1988-10-30', 1);
+values(2, 3, 'Pedro Junior', 'pedro.ideasfor@gmail.com','1234','26110335' ,  '1988-10-30', 1);
 
-insert into TbUsuarios(Usuario_id , Usuario_Categoria_id , 
+insert into TbUsuarios(Usuario_id ,  
 Usuario_Cidade_id, Usuario_Nome ,Usuario_Email , Usuario_Senha , Usuario_cep,
  Usuario_DataDeNascimento, Usuario_Perfil_Id)
-values(3, 1, 6, 'Vitor Batista', 'vitinho.baptista@gmail.com','1234','25015190',  '1988-10-30' , 1);
+values(3, 6, 'Vitor Batista', 'vitinho.baptista@gmail.com','1234','25015190',  '1988-10-30' , 1);
 
 
-insert into TbUsuarios(Usuario_id , Usuario_Categoria_id , 
+insert into TbUsuarios(Usuario_id ,  
 Usuario_Cidade_id, Usuario_Nome ,Usuario_Email , Usuario_Senha , Usuario_cep,
  Usuario_DataDeNascimento, Usuario_Perfil_Id )
-values(4, 1, 7, 'Fernando Ferreira', 'fernando@embratecc.com.br','1234','26221010',  '1988-10-30' , 1);
+values(4,  7, 'Fernando Ferreira', 'fernando@embratecc.com.br','1234','26221010',  '1988-10-30' , 1);
+
+
+insert into TbUsuarios(Usuario_id ,  
+Usuario_Cidade_id, Usuario_Nome ,Usuario_Email , Usuario_Senha , Usuario_cep,
+ Usuario_DataDeNascimento, Usuario_Perfil_Id )
+values(5,  7, 'Caue TbUsuarios', 'caueobuck@gmail.com','1234','14098331',  '1988-10-30' , 1);
+
 
 
 -- Conteudo
