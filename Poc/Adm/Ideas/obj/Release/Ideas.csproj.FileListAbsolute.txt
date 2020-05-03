@@ -69,3 +69,4 @@ D:\MEGAHACK\Time30\Poc\Adm\Ideas\bin\Release\Microsoft.Web.Infrastructure.xml
 D:\MEGAHACK\Time30\Poc\Adm\Ideas\obj\Release\Ideas.csproj.CopyComplete
 D:\MEGAHACK\Time30\Poc\Adm\Ideas\obj\Release\Ideas.dll
 D:\MEGAHACK\Time30\Poc\Adm\Ideas\obj\Release\Ideas.pdb
+D:\MEGAHACK\Time30\Poc\Adm\Ideas\obj\Release\Ideas.csprojAssemblyReference.cache

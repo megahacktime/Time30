@@ -1,7 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
@@ -47,7 +51,7 @@ namespace Ideas
             /// <returns></returns>
             public static string GerarMD5(string data)
             {
-                using(MD5 md5 = MD5.Create())
+                using (MD5 md5 = MD5.Create())
                 {
                     byte[] buffer = md5.ComputeHash(Encoding.UTF8.GetBytes(data));
                     StringBuilder sB = new StringBuilder();
@@ -111,7 +115,7 @@ namespace Ideas
         /// <param name="property">Nome da propriedade ou NULL</param>
         /// <param name="separador">o seprador (, ' ', ';' etc)</param>
         /// <returns></returns>
-        public static string ToString<T>(List<T>itens, string property, char separador) 
+        public static string ToString<T>(List<T> itens, string property, char separador)
         {
             string result = string.Empty;
             PropertyInfo pinfo = null;
@@ -122,10 +126,10 @@ namespace Ideas
 
             if (itens != null)
             {
-                for(int i = 0; i < itens.Count; i++)
+                for (int i = 0; i < itens.Count; i++)
                 {
                     // se for uma propriedade de um objeto
-                    if(pinfo != null)
+                    if (pinfo != null)
                     {
                         result += string.Format("{0}{1}", (i == 0) ? ' ' : separador, pinfo.GetValue(itens[i]));
                     }
@@ -136,7 +140,7 @@ namespace Ideas
                 }
             }
             return result;
-        } 
+        }
 
         /// <summary>
         /// Valida um cadeia dado a expressão desejada
@@ -160,12 +164,12 @@ namespace Ideas
         {
             TipoDeDocumento tp = TipoDeDocumento.CPF;
             string doc = RemoveFormatoCpfOuCnpj(numero);
-            if(doc.Length > 11)
+            if (doc.Length > 11)
             {
                 tp = TipoDeDocumento.CNPJ;
             }
             return tp;
-        } 
+        }
 
         public static string FormataCPF(string numero)
         {
@@ -174,7 +178,7 @@ namespace Ideas
 
         public static string FormataCNPJ(string numero)
         {
-           return Convert.ToUInt64(null).ToString(@"00\.000\.000\/0000\-00");
+            return Convert.ToUInt64(null).ToString(@"00\.000\.000\/0000\-00");
         }
 
         public static string RemoveFormatoCpfOuCnpj(string numero)
@@ -199,5 +203,154 @@ namespace Ideas
                 "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO"
             };
         }
+
+
+
+
+        public static string RequisicaoPOST(string url, string parametros)
+        {
+            string retorno = "";
+            string dadosPOST = parametros;
+            var dados = Encoding.UTF8.GetBytes(dadosPOST);
+            var requisicaoWeb = WebRequest.CreateHttp(url);
+            requisicaoWeb.Method = "POST";
+            //requisicaoWeb.ContentType = "application/x-www-form-urlencoded";
+            requisicaoWeb.ContentType = "application/json;";
+            requisicaoWeb.ContentLength = dados.Length;
+            //requisicaoWeb.UserAgent = "RequisicaoWebDemo";
+            //precisamos escrever os dados post para o stream
+            using (var stream = requisicaoWeb.GetRequestStream())
+            {
+                stream.Write(dados, 0, dados.Length);
+                stream.Close();
+            }
+            //ler e exibir a resposta
+            using (var resposta = requisicaoWeb.GetResponse())
+            {
+                var streamDados = resposta.GetResponseStream();
+                StreamReader reader = new StreamReader(streamDados);
+                object objResponse = reader.ReadToEnd();
+                retorno = objResponse.ToString();
+                streamDados.Close();
+                resposta.Close();
+            }
+
+            return retorno;
+        }
+
+        public static bool ClasseToXML<T>(String PathXML, T obj) where T : class
+        {
+            try
+            {
+                //----
+                string sCaminho = PathXML;
+
+                System.IO.StreamWriter writer = new System.IO.StreamWriter(sCaminho);
+                System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
+                serializer.Serialize(writer, obj);
+                writer.Close();
+                //---
+            }
+            catch (Exception ex)
+            {
+                string testo = ex.Message;
+                return false;
+            }
+            return true;
+        }
+
+        public static T XMLToClasse<T>(String PathXML) where T : class
+        {
+            object o = new object();
+            try
+            {
+                if (System.IO.File.Exists(PathXML) == true)
+                {
+                    System.IO.StreamReader objStreamReader = new System.IO.StreamReader(PathXML);
+                    System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(T));
+                    o = x.Deserialize(objStreamReader);
+                    objStreamReader.Close();
+                }
+                else
+                {
+                    o = null;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            return (T)o;
+        }
+
+        public static string ClassToJSOn<T>(T obj) where T : class
+        {
+            return JsonConvert.SerializeObject(obj); ;
+        }
+
+        public static T JSOnToClasse<T>(String json) where T : class
+        {
+            object o = new object();
+
+            o = Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json);
+
+            return (T)o;
+        }
+
+
+
+
+        public static List<T> DadosParaObjetoLista<T>(DataTable dados)
+        {
+            List<T> retorno = new List<T>();
+
+            PropertyInfo[] properties = typeof(T).GetProperties();
+
+            foreach (DataRow linha in dados.Rows)
+            {
+                T dadosSc = (T)Activator.CreateInstance(typeof(T));
+                foreach (var propertyInfo in properties)
+                {
+                    if (dados.Columns.IndexOf(propertyInfo.Name) > -1)
+                    {
+                        if (linha[propertyInfo.Name] != DBNull.Value)
+                            propertyInfo.SetValue(dadosSc, Convert.ChangeType(linha[propertyInfo.Name], propertyInfo.PropertyType), null);
+                    }
+                }
+
+                retorno.Add(dadosSc);
+            }
+
+            return retorno;
+        }
+
+        public static T DadosParaObjeto<T>(DataTable dados)
+        {
+            T retorno = (T)Activator.CreateInstance(typeof(T));
+
+            PropertyInfo[] properties = typeof(T).GetProperties();
+
+            foreach (DataRow linha in dados.Rows)
+            {
+                T dadosSc = (T)Activator.CreateInstance(typeof(T));
+                foreach (var propertyInfo in properties)
+                {
+
+                    if (dados.Columns.IndexOf(propertyInfo.Name) > -1)
+                    {
+                        if (linha[propertyInfo.Name] != DBNull.Value)
+                            propertyInfo.SetValue(dadosSc, Convert.ChangeType(linha[propertyInfo.Name], propertyInfo.PropertyType), null);
+                    }
+
+                }
+
+                retorno = dadosSc;
+            }
+
+            return retorno;
+        }
+
+
+
     }
 }
