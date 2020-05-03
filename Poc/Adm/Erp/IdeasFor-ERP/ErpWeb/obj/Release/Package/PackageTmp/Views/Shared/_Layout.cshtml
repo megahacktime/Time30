@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="sameorigin">
+
+
+    @{
+        string Titulo = "Aplicativo";
+        Erp.Configuracoes configura = new Erp.Configuracoes().Obter("TitleAplicacao");
+        if (configura != null)
+        {
+            Titulo = configura.valor;
+        }
+    }
+    <title>@ViewBag.Title  - @Titulo</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="~/Content/DatePicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="~/Content/DatePicker/js/locale/bootstrapDatetimepickerBR.js" charset="UTF-8"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @{
+                    string Nome = "Home";
+                    Erp.Configuracoes config = new Erp.Configuracoes().Obter("NomeAplicacao");
+                    if (config != null)
+                    {
+                        Nome = config.valor;
+                    }
+                }
+                @Html.ActionLink(Nome, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <div class="col-md-8">
+
+
+                    <ul class="nav navbar-nav">
+
+
+                        @{
+                            string NomeLogado = "";
+                            bool exibirLogin = false;
+                            configura = new Erp.Configuracoes().Obter("ExibirTelaLogin");
+
+                            if (configura != null)
+                            {
+                                bool.TryParse(configura.valor, out exibirLogin);
+                            }
+
+                            if ((exibirLogin && Session["login"] != null) || !exibirLogin )
+                            {
+                                int PerfilLogado = -1;
+
+                                if (Session["login"] != null && Session["login"] is Erp.Login)
+                                {
+                                    Erp.Login lg = (Erp.Login)Session["login"];
+                                    if (lg.Perfil_id != 0)
+                                    {
+                                        PerfilLogado = lg.Perfil_id;
+                                        NomeLogado = lg.Usuario;
+                                    }
+                                }
+
+
+                                foreach (Erp.Menu menu in new Erp.Menu().Listar(PerfilLogado, true))
+                                {
+                                    @*<li>@Html.ActionLink(menu.Descricao, "listar", menu.id)</li>*@
+                                    if (menu.Principal && menu.SubMenus != null && menu.SubMenus.Count > 0)
+                                    {
+                                        <li class="dropdown">
+                                            <a class="@menu.ClasseIcone   dropdown-toggle" data-toggle="dropdown" data-item="@menu.ClasseIcone"> @menu.Descricao</a>
+                                            <ul class="dropdown-menu">
+                                                @foreach (Erp.Menu Sub in menu.SubMenus)
+                                                {
+                                                    @*<li>@Html.ActionLink(menu.Descricao, "listar", menu.id)</li>*@
+                                                    <li class="dropdown">
+                                                        @if (Sub.BuscaTabela != null && Sub.BuscaTabela.id > 0)
+                                                        {
+                                                            <a class="@Sub.ClasseIcone " data-item="@Sub.ClasseIcone" href="~/Formulario/listar/@Sub.BuscaTabela.id"> @Sub.Descricao</a>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a class="@Sub.ClasseIcone " data-item="@Sub.ClasseIcone" href="@Sub.UrlDestino"> @Sub.Descricao</a>
+                                                        }
+
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </li>
+                                    }
+                                    else if (menu.UrlDestino == "" || menu.UrlDestino == null)
+                                    {
+                                        <li>
+                                            <a class="@menu.ClasseIcone   dropdown-toggle" data-toggle="dropdown" data-item="@menu.ClasseIcone"> @menu.Descricao</a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li><a class="@menu.ClasseIcone  " href="@menu.UrlDestino" data-item="@menu.ClasseIcone"> @menu.Descricao</a></li>
+                                    }
+
+                                }
+
+
+                            }
+
+                        }
+
+
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <b class="linkSairNomeLogado">
+                        <br /> - @NomeLogado -
+                        @if (exibirLogin && Session["login"] != null)
+                        {
+                           @Html.ActionLink("Sair", "Sair", "home")
+                        }
+
+                    </b>
+
+                </div>
+                    <br />
+
+                </div>
+
+            </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,17 @@
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\app.config
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Erp.dll
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Erp.pdb
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\BouncyCastle.Crypto.dll
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Google.Protobuf.dll
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Ideas.dll
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\MySql.Data.dll
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Renci.SshNet.dll
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Newtonsoft.Json.dll
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Ideas.pdb
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Ideas.dll.config
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Google.Protobuf.xml
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\bin\Debug\Renci.SshNet.xml
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\obj\Debug\Erp.csprojAssemblyReference.cache
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\obj\Debug\Erp.csproj.CopyComplete
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\obj\Debug\Erp.dll
+D:\IdeasFor\Bibucket\IdeasGeral\branches\Master\ideasfor\Erp\IdeasFor-ERP\Erp\obj\Debug\Erp.pdb

@@ -1,0 +1,132 @@
+﻿@model  Erp.ControleListaDePaginas
+
+@{
+
+    System.Data.DataRow Linha = Model.Listagem.DadosApresentacao.Rows.Count > 0 ? Model.Listagem.DadosApresentacao.Rows[0] : Model.Listagem.DadosApresentacao.NewRow();
+    System.Data.DataColumnCollection Colunas = Model.Listagem.DadosApresentacao.Columns;
+}
+<h2> @Model.Listagem.Titulo</h2>
+
+<div class="row">
+    <form method="post" enctype="application/x-www-form-urlencoded">
+
+
+        @foreach (System.Data.DataRow coluna in Model.Listagem.DadosColunas.Rows)
+        {
+            <div class="col-md-6 form-row">
+                <div class="input-group">
+
+                    @{ switch (Int32.Parse(coluna["ControleHTML_id"].ToString()))
+                        {
+                            case 1: //nd
+                                <span class="input-group-addon  wd-250px"><span class="dis-block-line wd-150px" style="width:200px !important;" >@coluna["BuscaCampo_CampoDescricao"].ToString()</span></span>
+                                <label class="form-control" for="male">@Linha[coluna["BuscaCampo_NomeCampo"].ToString()]</label>
+
+                                break;
+                            case 2: // Input
+                                <span class="input-group-addon  wd-250px"><span class="dis-block-line  wd-150px" style="width:200px !important;" >@coluna["BuscaCampo_CampoDescricao"].ToString()</span></span>
+
+                                if (coluna["BuscaCampo_Mascara"].ToString() != "")
+                                {
+                                    <input type="text" @Html.Raw(coluna["BuscaCampo_Obrigatorio"].ToString() == "1" ? "required" : "") name='@coluna["BuscaCampo_NomeCampo"].ToString()' pattern='@coluna["BuscaCampo_Mascara"].ToString()' class="form-control" value='@Linha[coluna["BuscaCampo_NomeCampo"].ToString()]' placeholder="@coluna["BuscaCampo_CampoDescricao"].ToString()" />
+                                }
+                                else
+                                {
+                                    <input type="text" @Html.Raw(coluna["BuscaCampo_Obrigatorio"].ToString() == "1" ? "required" : "") name='@coluna["BuscaCampo_NomeCampo"].ToString()' class="form-control" value='@Linha[coluna["BuscaCampo_NomeCampo"].ToString()]' placeholder="@coluna["BuscaCampo_CampoDescricao"].ToString()" />
+                                }
+
+                                break;
+
+                            case 4: // select
+                                <span class="input-group-addon wd-250px"><span class="dis-block-line  " style="width:200px !important;">@coluna["BuscaCampo_CampoDescricao"].ToString()</span></span>
+                                System.Data.DataTable dados = Model.ExecutaConsulta(coluna["BuscaCampo_FonteDados"].ToString());
+                                <select name='@coluna["BuscaCampo_NomeCampo"].ToString()' class="form-control">
+                                    @foreach (System.Data.DataRow dadosSelect in dados.Rows)
+                                    {
+                                        <option value='@dadosSelect[0].ToString()' @Html.Raw(dadosSelect[0].ToString() == @Linha[coluna["BuscaCampo_NomeCampo"].ToString()].ToString() || dadosSelect[0].ToString() == coluna["BuscaCampo_ValorPadrao"].ToString() ? "selected" : "")>@dadosSelect[1].ToString()</option>
+
+                                    }
+                                </select>
+                                break;
+
+
+
+                            case 5: // Checkbox
+                                <span class="input-group-addon  wd-250px"><span class="dis-block-line wd-150px">@coluna["BuscaCampo_CampoDescricao"].ToString()</span></span>
+                                <p></p><p> <input type="checkbox" class="form-check-input" name='@coluna["BuscaCampo_NomeCampo"].ToString()' @Html.Raw(@Linha[coluna["BuscaCampo_NomeCampo"].ToString()].ToString() == "1" ? "checked" : "") placeholder="@coluna["BuscaCampo_CampoDescricao"].ToString()" /> </p>
+                                break;
+
+                            case 6: // DatePicker
+                                @*<span class="input-group-addon wd-150px"><span class="dis-block-line">@coluna["BuscaCampo_CampoDescricao"].ToString()</span></span>
+                    <input type="text" id='@coluna["BuscaCampo_NomeCampo"].ToString()' name='@coluna["BuscaCampo_NomeCampo"].ToString()' pattern='@coluna["BuscaCampo_Mascara"].ToString()' class="form-control" value='@Linha[coluna["BuscaCampo_NomeCampo"].ToString()]' placeholder="@coluna["BuscaCampo_CampoDescricao"].ToString()" />*@
+
+                                <span class="input-group-addon wd-250px"><span class="dis-block-line wd-150px">@coluna["BuscaCampo_CampoDescricao"].ToString()</span></span>
+                                <div class='input-group date wd-250px ' id='@coluna["BuscaCampo_NomeCampo"].ToString()_gp'>
+                                    <input type="text" @Html.Raw(coluna["BuscaCampo_Obrigatorio"].ToString() == "1" ? "required" : "") id='@coluna["BuscaCampo_NomeCampo"].ToString()' name='@coluna["BuscaCampo_NomeCampo"].ToString()' class="form-control" value='@Linha[coluna["BuscaCampo_NomeCampo"].ToString()]' placeholder="@coluna["BuscaCampo_CampoDescricao"].ToString()" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+
+                                <script type="text/javascript">
+
+                                    $('#@coluna["BuscaCampo_NomeCampo"].ToString()_gp').datetimepicker({
+                                   language: 'pt-BR',
+                                   Format: 'DD/MM/YYYY HH:mm',
+                                    weekStart: 1,
+                                    todayBtn:  1,
+		                            autoclose: 1,
+		                            todayHighlight: 1,
+		                            startView: 2,
+		                            minView: 2,
+                                        forceParse: 0
+
+                                     });
+
+
+
+                                </script>
+
+
+
+                                break;
+
+                            case 7: // InputFile 
+                                <span class="input-group-addon wd-250px"><span style="width:150px;" class="dis-block-line  wd-250px">@coluna["BuscaCampo_CampoDescricao"].ToString()</span></span>
+                               <p></p> <p><input type="text" name='@coluna["BuscaCampo_NomeCampo"].ToString()' pattern='@coluna["BuscaCampo_Mascara"].ToString()' class="form-control" value='@Linha[coluna["BuscaCampo_NomeCampo"].ToString()]' placeholder="@coluna["BuscaCampo_CampoDescricao"].ToString()" /> </p>
+                                break;
+
+                            case 8: // List Busca Tabelas
+                                <span class="input-group-addon wd-250px"><span class="dis-block-line">@coluna["BuscaCampo_CampoDescricao"].ToString()</span></span>
+                                <input type="text" name='@coluna["BuscaCampo_NomeCampo"].ToString()' pattern='@coluna["BuscaCampo_Mascara"].ToString()' class="form-control" value='@Linha[coluna["BuscaCampo_NomeCampo"].ToString()]' placeholder="@coluna["BuscaCampo_CampoDescricao"].ToString()" />
+
+
+                                break;
+
+
+                        }
+                    }
+
+
+                </div>
+            </div>
+
+
+        }
+
+
+        @*@foreach (System.Data.DataColumn coluna in Colunas)
+            {
+                <div class="col-md-6 form-row">
+                    <div class="input-group">
+                        <span class="input-group-addon wd-150px"><span class="dis-block-line">@coluna.Caption</span></span>
+                        <input type="text" name="@coluna.ColumnName" class="form-control" value="@Linha[coluna]" placeholder="@coluna.Caption" />
+                    </div>
+                </div>
+            }*@
+        <div class="col-md-6 form-row">
+            <button class="btn btn-primary" type="submit">Salvar</button>
+        </div>
+    </form>
+</div>
+
