@@ -34,6 +34,14 @@ namespace Api.Controllers
             };
             try
             {
+                List<Erp.Configuracoes> confis = new Erp.Configuracoes().Lista();
+                Erp.Configuracoes configura = confis.Find(x => x.chave == "QtdProdutosListar");
+                if (configura != null)
+                {
+                    int.TryParse(configura.valor , out QtdProdutosLista);
+                }
+
+
                 UsuarioModel user = new DaoUsuarios().login(Usuario_Email, Usuario_Senha, QtdProdutosLista);
                 if (user.Usuario_id > 0)
                 {

@@ -19,25 +19,25 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>02/09/2020 21:57:39</publishTime>
     </File>
     <File Include="bin/Erp.dll">
-      <publishTime>05/01/2020 22:02:14</publishTime>
+      <publishTime>05/04/2020 00:19:08</publishTime>
     </File>
     <File Include="bin/Erp.pdb">
-      <publishTime>05/01/2020 22:02:14</publishTime>
+      <publishTime>05/04/2020 00:19:08</publishTime>
     </File>
     <File Include="bin/ErpWeb.dll">
-      <publishTime>05/01/2020 22:02:15</publishTime>
+      <publishTime>05/04/2020 00:35:16</publishTime>
     </File>
     <File Include="bin/ErpWeb.pdb">
-      <publishTime>05/01/2020 22:02:15</publishTime>
+      <publishTime>05/04/2020 00:35:16</publishTime>
     </File>
     <File Include="bin/Ideas.dll">
-      <publishTime>05/01/2020 22:02:14</publishTime>
+      <publishTime>05/04/2020 00:19:08</publishTime>
     </File>
     <File Include="bin/Ideas.dll.config">
       <publishTime>02/09/2020 21:57:39</publishTime>
     </File>
     <File Include="bin/Ideas.pdb">
-      <publishTime>05/01/2020 22:02:14</publishTime>
+      <publishTime>05/04/2020 00:19:08</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>02/09/2020 23:10:48</publishTime>
@@ -58,7 +58,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/28/2018 13:00:08</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.Optimization.resources.dll">
-      <publishTime>02/11/2014 15:28:42</publishTime>
+      <publishTime>11/02/2014 15:28:42</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.Razor.resources.dll">
       <publishTime>11/28/2018 13:00:30</publishTime>
@@ -367,7 +367,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>02/09/2020 23:10:47</publishTime>
     </File>
     <File Include="Views/Shared/_Form.cshtml">
-      <publishTime>05/02/2020 12:10:43</publishTime>
+      <publishTime>02/05/2020 12:10:43</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>04/16/2020 23:53:55</publishTime>
@@ -382,7 +382,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>02/09/2020 23:10:47</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/02/2020 11:38:08</publishTime>
+      <publishTime>02/05/2020 11:38:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

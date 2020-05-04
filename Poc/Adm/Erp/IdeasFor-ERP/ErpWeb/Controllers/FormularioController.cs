@@ -62,6 +62,7 @@ namespace ErpWeb.Controllers
         //}
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Cadastro(DataTable data)
         {
             List<string> ListaValores = new List<string>();

@@ -11,7 +11,7 @@ namespace Api.Dao
 {
     public class DaoUsuarios
     {
-        public UsuarioModel login(string usuario, string Senha,int ProdutosLista = 3)
+        public UsuarioModel login(string usuario, string Senha,int ProdutosLista = 7)
         {
             Dbo conec = new Dbo();
             string sql = "select * from TbUsuarios where Usuario_Email='" + usuario + "' and Usuario_Senha='" + Senha + "' and Usuario_ativo=1";

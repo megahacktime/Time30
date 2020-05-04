@@ -27,6 +27,14 @@ namespace Api.Controllers
         [ResponseType(typeof(ResponseMessage<List<ProdutoModel>>))]
         public HttpResponseMessage ListaProdutosParaUsuarios(int usuario_id, int QtdProdutos)
         {
+
+            List<Erp.Configuracoes> confis = new Erp.Configuracoes().Lista();
+            Erp.Configuracoes configura = confis.Find(x => x.chave == "QtdProdutosListar");
+            if (configura != null)
+            {
+                int.TryParse(configura.valor, out QtdProdutos);
+            }
+
             ResponseMessage<List<ProdutoModel>> response = new ResponseMessage<List<ProdutoModel>>()
             {
                 Status = (int)HttpStatusCode.OK,
