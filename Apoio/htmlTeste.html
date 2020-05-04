@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://status.auth0.com/feed?domain=time30.auth0.com</id>
+    <title>Auth0 Status - time30.auth0.com</title>
+    <updated>2020-05-02T15:25:18Z</updated>
+    <generator>Feed for Node.js</generator>
+    <author>
+        <name>Auth0</name>
+        <uri>https://auth0.com/</uri>
+    </author>
+    <link rel="alternate" href="https://status.auth0.com/feed?domain=time30.auth0.com"/>
+    <subtitle>Incident History</subtitle>
+    <logo>https://cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/badge.svg</logo>
+    <icon>https://cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/favicon.png</icon>
+    <rights>2013-2017 Auth0® Inc. All Rights Reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Unable to change "Require Multi-Factor Auth" value from Always to None]]></title>
+        <id>4kg2qjhpm9h6</id>
+        <link href="https://status.auth0.com/incidents/4kg2qjhpm9h6">
+        </link>
+        <updated>2020-04-07T21:16:37Z</updated>
+        <content type="html"><![CDATA[<p><small>Apr 7, 21:16 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Apr 7, 21:00 UTC</small><br><strong>Monitoring</strong> - A fix has been implemented and we are monitoring the results.</p><p><small>Apr 7, 20:18 UTC</small><br><strong>Identified</strong> - We have found an issue which prevents users from changing the value of the "Require Multi-Factor Auth" setting in the Multifactor Auth page in the Dashboard from Always to None. The correlated API endpoint is also affected. Please note, this should not affect MFA or login transactions in your tenant, or managing other parts of your tenant.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Errors in Management API (except Users endpoints)]]></title>
+        <id>827c5jcvfbbp</id>
+        <link href="https://status.auth0.com/incidents/827c5jcvfbbp">
+        </link>
+        <updated>2020-03-23T19:39:10Z</updated>
+        <content type="html"><![CDATA[<p><small>Mar 23, 19:38 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Mar 23, 19:38 UTC</small><br><strong>Investigating</strong> - We are currently experiencing errors in our Management API, except Users endpoints (`/api/v2/users`). Our Engineers are currently looking into it, and we will provide you with more updates soon.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[id tokens wrongly issued with the RS256 algorithm]]></title>
+        <id>8xccwkxnxxnr</id>
+        <link href="https://status.auth0.com/incidents/8xccwkxnxxnr">
+        </link>
+        <updated>2020-03-13T13:05:39Z</updated>
+        <content type="html"><![CDATA[<p><small>Mar 13, 13:05 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Mar 13, 12:23 UTC</small><br><strong>Monitoring</strong> - We are continuing to monitor for any further issues.</p><p><small>Mar 13, 12:23 UTC</small><br><strong>Monitoring</strong> - We have deployed and verified the fix to correctly issue id tokens using HS256. Continuing to monitor.</p><p><small>Mar 13, 12:06 UTC</small><br><strong>Identified</strong> - Some id_tokens are being issued using the RS256 algorithm when they should be issued with HS256. We have identified the problem and are working on deploying a fix.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issues with Logging Exporting Extensions]]></title>
+        <id>txw1t9lc9rpz</id>
+        <link href="https://status.auth0.com/incidents/txw1t9lc9rpz">
+        </link>
+        <updated>2020-03-11T18:54:38Z</updated>
+        <content type="html"><![CDATA[<p><small>Mar 11, 18:54 UTC</small><br><strong>Postmortem</strong> - # **Root Cause Analysis - Delay in exporting logs via Auth0 Logging Extensions - 2020-03-03**
+
+## **Root Cause Analysis**
+
+Auth0 provides customers with Extensions to export logs to external services like Splunk or Papertrail. These Extensions are run automatically on a specified schedule.
+
+Between March 2 at 19:48 UTC and March 3 at 10:09 UTC, an incorrect code change in production Auth0 instances in AU, EU, and US affected Extensions used to export logs. This code change made it so that the metadata normally available to Auth0 Logging Extensions was consequently empty, and therefore unable to handle the invocations. As a result, Auth0 customers may have noticed a delay in log exports to external providers.
+
+Additionally, due to a shortcoming with the tooling used to manage deployments, on-call engineers who attempted to roll back were inadvertently redeploying the same version.
+
+## **Why this won’t happen again**
+
+* Improved logging, metrics, and alerting for increased failures of scheduled execution of Extensions.
+* Improved automated test coverage of scheduled execution of Extensions.
+* Improved tooling for faster rollback.
+
+## **Timeline**
+
+19:48 UTC - Deployed to AU
+
+22:28 UTC - Deployed to EU
+
+23:07 UTC - Deployed to US
+
+04:45 UTC - Incident declared
+
+04:50 UTC - Developer Support Engineering paged on-call engineers
+
+05:30 UTC - On-call Engineer started reverting recent deployment
+
+05:42 UTC - Inadvertently failed to revert back in US
+
+05:54 UTC - Inadvertently failed to revert back in AU
+
+06:03 UTC - Inadvertently failed to revert back in EU
+
+06:05 UTC - Started investigating the auth0-logs-to-provider extension
+
+06:47 UTC - Developer Support Engineering paged Engineer for help with auth0-logs-to-provider extension
+
+08:47 UTC - Escalated incident to another platform-specific Engineer
+
+09:45 UTC - Correctly reverted back to working version in AU
+
+10:00 UTC - Correctly reverted back to working version in US
+
+10:09 UTC - Correctly reverted back to working version in EU
+
+10:09 UTC - At this point all customer impact was mitigated.</p><p><small>Mar 3, 10:15 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Mar 3, 10:04 UTC</small><br><strong>Monitoring</strong> - A fix has been implemented and we are monitoring the results.</p><p><small>Mar 3, 9:51 UTC</small><br><strong>Identified</strong> - The issue has been identified and a fix is being implemented.</p><p><small>Mar 3, 5:21 UTC</small><br><strong>Investigating</strong> - We are currently investigating an issue where Logging Extensions are not exporting logs.
+
+This incident only affects the exporting of logs via Extensions, but not the reading the logs in your Dashboard, through the Management API, or any other operations in your tenant.
+
+The relevant Engineering teams are already investigating, and we will keep you posted as we know more.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Increased error rates in extensibility endpoints]]></title>
+        <id>93n82msvv3qy</id>
+        <link href="https://status.auth0.com/incidents/93n82msvv3qy">
+        </link>
+        <updated>2020-03-03T03:18:16Z</updated>
+        <content type="html"><![CDATA[<p><small>Mar 3, 3:18 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Mar 3, 2:55 UTC</small><br><strong>Monitoring</strong> - We experienced a spike of errors in authentication flows which involve extensibility endpoints. The services are back to normal and we are monitoring.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Extra parameters required in certain authentication requests]]></title>
+        <id>vzb5k2qz7qs7</id>
+        <link href="https://status.auth0.com/incidents/vzb5k2qz7qs7">
+        </link>
+        <updated>2020-02-19T01:21:19Z</updated>
+        <content type="html"><![CDATA[<p><small>Feb 19, 1:21 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Feb 19, 0:53 UTC</small><br><strong>Monitoring</strong> - A fix has been implemented and we are monitoring the results.</p><p><small>Feb 19, 0:21 UTC</small><br><strong>Identified</strong> - Our Engineering teams are in the process of applying a hotfix to the environments. The hotfix has finished deploying in our Production environments for all regions, and should finish in our Preview environments soon.</p><p><small>Feb 19, 0:04 UTC</small><br><strong>Identified</strong> - We have identified an issue that requires extra parameters in certain authentication requests. This is resulting in an error message being prompted while using previous `/authorize` links or performing certain operations within the Auth0 platform. This will only affect a small number of customers. Our Engineering teams are already working on providing a fix, and we will keep you posted with any updates we might have.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Errors in Auth0]]></title>
+        <id>2yyg87znv347</id>
+        <link href="https://status.auth0.com/incidents/2yyg87znv347">
+        </link>
+        <updated>2020-02-17T21:01:23Z</updated>
+        <content type="html"><![CDATA[<p><small>Feb 17, 16:57 UTC</small><br><strong>Postmortem</strong> - # Summary
+
+On February 4th, 2020, between 19:22 UTC and 20:00 UTC, tenants in the US environment experienced elevated error rates and response times on calls to the Authentication API.
+
+From 19:22 UTC to 20:32 UTC, a large percentage of login flows using ​[Auth0 Classic Universal Login Experience](https://auth0.com/docs/universal-login/classic)​ failed to complete due to errors while rendering the login form.
+
+The following tables provide detailed percentage of elevated error rates and response times during the incident:
+
+### US STABLE Authentication API
+
+| Period | Error |
+| --- | --- |
+| 19:22 UTC - 20:00 UTC | 18.98% |
+
+### US Classic Universal Login failures
+
+| Period | Error |
+| --- | --- |
+| 19:22 UTC - 20:34 UTC | 33.78% |
+
+# Root Cause
+
+The root cause of the incident was a failure on our failover process, which caused the authentication server to enter a degraded performance state.
+
+At 18:50 UTC, an Incident Response was triggered because an increase in load on the database used for most authentication flows reported by our monitoring. The load was caused by customer requests to delete entities in the database. The additional load was causing a very small percentage of requests to experience elevated response times.
+
+At 19:22 UTC, the database load spiked, and the primary database appeared unresponsive to the rest of our database cluster. An automatic failover was triggered, and a secondary replica took the role of the primary database.
+
+The failover caused our authentication server processes to switch to a degraded state, and start failing to respond to customer requests.
+
+The issue also affected a service that is responsible for serving a file necessary for Classic Universal Login. However, these files are cached by a CDN, so many requests completed successfully, despite the service degradation.
+
+The degradation was caused by a bug in our cache layer that caused all requests performed during the failover to be stored in an incorrect state. When a new request that hits this invalid cache entries were performed, they were queued, but the result never returned, causing the request to timeout.
+
+Once the effect was understood, the processes were restarted in an attempt to restore service availability. At 20:00 UTC the Authentication API was restored to a working state.
+
+The Incident Response team then focused on the issues affecting Classic Universal Login. Classic Universal Login requires a file served from our CDN to populate the connection information for a given client. Initially, our monitoring tools led us to believe we had a CDN issue. The issue was then traced to the backend service queried by the CDN, which was experiencing the same symptoms as the Authentication API.
+
+Once the cause was identified, we started restarting the affected services. At 20:31 UTC the service responsible for serving the file required by Classic Universal Login was restarted, resolving the incident.
+
+## Remediation Actions
+
+Our Incident Response team responded with the following action:
+
+1. Rate limited the customer that was causing elevated database load. Only the affected management endpoints were initially blocked, and the customer was informed of the measure.
+2. Restarted the Authentication API related services.
+3. Restarted the Classic Universal Login related services.
+
+## Next Steps
+
+### Immediate
+
+* We have already implemented a fix for the cache issue that caused the persistent request timeouts.
+* Split monitoring of CDN and the Classic Universal Login to improve our response time.
+* Initiate a review of our services behavior on database failover while under load, with the goal of reproducing the incident and identify other potential failure modes.
+
+We thank all our customers for their patience and continuous support. If there are any questions or issues related to the summary report, please don’t hesitate to contact our support team via the [Auth0 Support Center](https://support.auth0.com).</p><p><small>Feb 4, 21:44 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Feb 4, 20:05 UTC</small><br><strong>Monitoring</strong> - Our components seem to be operational once again, and we are monitoring the results of the actions we took, and we will keep you posted. Should you need further assistance or information in the meantime, please contact our Support team at support.auth0.com.</p><p><small>Feb 4, 19:40 UTC</small><br><strong>Investigating</strong> - Our Engineering teams are currently investigating a mix of elevated response times and timeout errors in Auth0. We apologize for any issues this might be causing, and we will provide updates as they are available.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Increased error rates from LinkedIn]]></title>
+        <id>nx92sq150y6f</id>
+        <link href="https://status.auth0.com/incidents/nx92sq150y6f">
+        </link>
+        <updated>2020-01-14T14:28:33Z</updated>
+        <content type="html"><![CDATA[<p><small>Jan 14, 14:28 UTC</small><br><strong>Resolved</strong> - No further errors were detected and LinkedIn also informed that the issues on their side should now be resolved (https://twitter.com/LinkedInHelp/status/1217087628862009345).</p><p><small>Jan 14, 14:06 UTC</small><br><strong>Monitoring</strong> - We are lo longer observing the same set of errors originating from LinkedIn as before. We will monitor the situation for a bit more and then consider the situation as resolved if nothing surfaces.</p><p><small>Jan 14, 13:06 UTC</small><br><strong>Monitoring</strong> - We have received multiple reports of issues when authenticating using the LinkedIn social connection. Per the information available at this time this seems an issue with LinkedIn itself as they are currently experiencing some problems (https://twitter.com/LinkedInHelp/status/1217040453859717120).</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[We are investigating delays delivering emails]]></title>
+        <id>bfy2jgm4dhw9</id>
+        <link href="https://status.auth0.com/incidents/bfy2jgm4dhw9">
+        </link>
+        <updated>2020-01-11T08:01:15Z</updated>
+        <content type="html"><![CDATA[<p><small>Jan 11, 8:01 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Jan 11, 7:51 UTC</small><br><strong>Monitoring</strong> - We have identified the issue and mitigated it</p><p><small>Jan 11, 7:31 UTC</small><br><strong>Investigating</strong> - We are currently investigating this issue.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[We are investigating issues sending email through Mandrill provider (affecting also shared provider)]]></title>
+        <id>f03mvhryz4l9</id>
+        <link href="https://status.auth0.com/incidents/f03mvhryz4l9">
+        </link>
+        <updated>2020-01-01T02:02:41Z</updated>
+        <content type="html"><![CDATA[<p><small>Jan 1, 2:02 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Jan 1, 1:42 UTC</small><br><strong>Monitoring</strong> - Errors have dropped significantly we will keep monitoring.</p><p><small>Jan 1, 1:20 UTC</small><br><strong>Identified</strong> - We are investigating a new increase of errors associated with the same system.</p><p><small>Jan 1, 1:09 UTC</small><br><strong>Monitoring</strong> - We have seen a significant drop in the number of errors.</p><p><small>Jan 1, 1:07 UTC</small><br><strong>Identified</strong> - Mandrill have acknowledge the issue and their engineers are working on it (https://twitter.com/mandrillapp/status/1212175379558993920).</p><p><small>Jan 1, 1:06 UTC</small><br><strong>Investigating</strong> - We are continuing to investigate this issue.</p><p><small>Jan 1, 1:05 UTC</small><br><strong>Investigating</strong> - We are currently investigating this issue.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elevated response times in Authentication transactions]]></title>
+        <id>rpctnc6jd1kl</id>
+        <link href="https://status.auth0.com/incidents/rpctnc6jd1kl">
+        </link>
+        <updated>2019-12-27T23:51:24Z</updated>
+        <content type="html"><![CDATA[<p><small>Dec 27, 23:49 UTC</small><br><strong>Postmortem</strong> - We have now completed our full Root Cause Analysis. Please see [here](https://cdn.auth0.com/blog/20191219-Incident-RCA.pdf) for the full details. Don’t hesitate to contact our Support team via Auth0’s [Support Center](https://support.auth0.com/) if you have any questions.</p><p><small>Dec 19, 21:01 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Dec 19, 19:45 UTC</small><br><strong>Monitoring</strong> - Our response team have found the root cause and have applied a fix. Response times are now back to normal. We will publish a post-mortem within the next 7 days;  further updates will also be published here.  Thank you for your understanding, and should you have any queries please don’t hesitate to reach out to your Auth0 team.</p><p><small>Dec 19, 19:04 UTC</small><br><strong>Monitoring</strong> - We are seeing metrics improving across the board after applying a change on the infrastructure. Response times are still high but authentication/API calls are improving.</p><p><small>Dec 19, 18:51 UTC</small><br><strong>Investigating</strong> - The response team continues to work on finding ways to remove pressure from the data layer. We are seeing an unusual load pattern on writes and trying different ways to mitigate it.</p><p><small>Dec 19, 18:32 UTC</small><br><strong>Investigating</strong> - We are still looking at the root cause and trying different strategies to deal with the high pressure on the data layer. The response team is all hands on deck on this.</p><p><small>Dec 19, 18:17 UTC</small><br><strong>Investigating</strong> - Due to the ongoing incident, access to the Dashboard and the Auth0 Support Center might be temporarily unavailable. If you are unable to access these resources, please, try logging in again.</p><p><small>Dec 19, 17:32 UTC</small><br><strong>Investigating</strong> - Our Engineering teams are still investigating this issue. We will provide you with more updates soon.</p><p><small>Dec 19, 17:00 UTC</small><br><strong>Investigating</strong> - We are currently investigating elevated response times across Auth0. The relevant teams are investigating, and we will provide you with updates as we have them. We apologize for any inconveniences this might cause, and thank you for your patience while we resolve this.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Increased Errors for Customers Using SMTP for Email Delivery]]></title>
+        <id>jmbynjtv4f77</id>
+        <link href="https://status.auth0.com/incidents/jmbynjtv4f77">
+        </link>
+        <updated>2019-12-11T23:24:59Z</updated>
+        <content type="html"><![CDATA[<p><small>Dec 11, 23:23 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Dec 11, 23:17 UTC</small><br><strong>Monitoring</strong> - A fix has been implemented and we are monitoring the results.</p><p><small>Dec 11, 22:58 UTC</small><br><strong>Identified</strong> - We are continuing to work on a fix for this issue.</p><p><small>Dec 11, 22:33 UTC</small><br><strong>Identified</strong> - We are still working on the remediation.</p><p><small>Dec 11, 21:29 UTC</small><br><strong>Identified</strong> - For a small percentage of customers who have configured their email provider as SMTP provider, we are currently experiencing errors in sending emails via these configured SMTP interfaces.
+
+We have identified the cause and are working on remediation.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Delay sending emails via the shared email provider]]></title>
+        <id>dsnb0gr4j4ys</id>
+        <link href="https://status.auth0.com/incidents/dsnb0gr4j4ys">
+        </link>
+        <updated>2019-12-09T00:25:46Z</updated>
+        <content type="html"><![CDATA[<p><small>Dec 9, 0:25 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Dec 9, 0:05 UTC</small><br><strong>Investigating</strong> - We are currently investigating this issue.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elevated response times in Auth0]]></title>
+        <id>wx11lvpzmdkj</id>
+        <link href="https://status.auth0.com/incidents/wx11lvpzmdkj">
+        </link>
+        <updated>2019-11-04T19:40:24Z</updated>
+        <content type="html"><![CDATA[<p><small>Nov 4, 19:40 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Nov 4, 19:14 UTC</small><br><strong>Monitoring</strong> - We are continuing to monitor for any further issues.</p><p><small>Nov 4, 19:13 UTC</small><br><strong>Monitoring</strong> - A fix has been implemented and we are monitoring the results.</p><p><small>Nov 4, 19:02 UTC</small><br><strong>Investigating</strong> - Following our scheduled maintenance, we are experiencing some high response times across Auth0. The relevant teams are already investigating, and we will be updating you as we have more news regarding this.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[General Auth0 Maintenance]]></title>
+        <id>6tf1c0ly868q</id>
+        <link href="https://status.auth0.com/incidents/6tf1c0ly868q">
+        </link>
+        <updated>2019-11-04T18:19:32Z</updated>
+        <content type="html"><![CDATA[<p><small>Nov 4, 18:19 UTC</small><br><strong>Completed</strong> - The scheduled maintenance has been completed.</p><p><small>Nov 4, 18:14 UTC</small><br><strong>In_progress</strong> - Scheduled maintenance is currently in progress. We will provide updates as necessary.</p><p><small>Nov 4, 18:13 UTC</small><br><strong>Scheduled</strong> - We're currently doing some maintenance in our servers. We expect a maximum of 5 seconds downtime, and we will let you know as soon as we have finished our operations.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elevated errors on login]]></title>
+        <id>xlng0fl53d43</id>
+        <link href="https://status.auth0.com/incidents/xlng0fl53d43">
+        </link>
+        <updated>2019-10-29T21:34:56Z</updated>
+        <content type="html"><![CDATA[<p><small>Oct 29, 21:34 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Oct 29, 19:18 UTC</small><br><strong>Monitoring</strong> - A small number of users are experiencing an increase in failures during login.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Feature Disruption] User Indexing Delays impacting Search API]]></title>
+        <id>53f4gyf2j749</id>
+        <link href="https://status.auth0.com/incidents/53f4gyf2j749">
+        </link>
+        <updated>2019-10-28T17:14:21Z</updated>
+        <content type="html"><![CDATA[<p><small>Oct 28, 17:14 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Oct 28, 17:02 UTC</small><br><strong>Monitoring</strong> - A fix has been implemented and we are monitoring the results.</p><p><small>Oct 28, 15:50 UTC</small><br><strong>Investigating</strong> - Our user index processing pipeline is running behind. Queries to the Search API will return stale results until the system is caught up. We will post an update with an ETA as soon as possible.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elevated Errors from the Authorization Extension]]></title>
+        <id>kqqw4dl5wmk3</id>
+        <link href="https://status.auth0.com/incidents/kqqw4dl5wmk3">
+        </link>
+        <updated>2019-10-22T23:59:51Z</updated>
+        <content type="html"><![CDATA[<p><small>Oct 22, 23:59 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Oct 22, 23:44 UTC</small><br><strong>Monitoring</strong> - A fix has been implemented and we are monitoring the results.</p><p><small>Oct 22, 21:52 UTC</small><br><strong>Identified</strong> - We have identified a backend workaround for this issue and have deployed it to our EU region. We are currently deploying it in our US and AU regions.</p><p><small>Oct 22, 19:55 UTC</small><br><strong>Investigating</strong> - We have determined that the impact of the current incident is limited to customers using Auth0's Authorization Extension with S3 storage, where requests will time out. This incident is not affecting customers with Webtask Storage.
+
+We have also detected an uptick on errors in the US and AU regions within the last 60 minutes.
+
+Finally, Amazon, one has reported issues with their Route53 service, which could be the root cause of these timeouts. You can check the status to this potentially related issue in https://status.aws.amazon.com/
+
+We suggest that you modify the Rule generated by the Authorization Extension to increase the timeout value as a potential workaround to these issues. However, due to the Route53 service degradation, we can not guarantee this will resolve the issue.
+
+We will keep you posted as we find more information related to this incident. Thank you for your continued patience while we work on restoring your services.</p><p><small>Oct 22, 15:03 UTC</small><br><strong>Investigating</strong> - We are continuing to investigate this issue. We are still unable to reproduce it in an isolated environment. We will continue to provide updates as we have them, and we apologize for any inconveniences caused.</p><p><small>Oct 22, 13:10 UTC</small><br><strong>Investigating</strong> - We are continuing to investigate this issue.</p><p><small>Oct 22, 13:07 UTC</small><br><strong>Investigating</strong> - We are currently investigating this issue.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Feature Disruption] User Indexing Delays impacting Search API]]></title>
+        <id>9stfv6gr62x9</id>
+        <link href="https://status.auth0.com/incidents/9stfv6gr62x9">
+        </link>
+        <updated>2019-10-04T12:18:21Z</updated>
+        <content type="html"><![CDATA[<p><small>Oct 4, 12:18 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Oct 4, 11:15 UTC</small><br><strong>Investigating</strong> - Our user index processing pipeline is running behind. Queries to the Search API will return stale results until the system is caught up. We will post an update with an ETA as soon as possible.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Feature Disruption] User Indexing Delays impacting Search API]]></title>
+        <id>tvjycqqq9pqv</id>
+        <link href="https://status.auth0.com/incidents/tvjycqqq9pqv">
+        </link>
+        <updated>2019-10-16T18:13:40Z</updated>
+        <content type="html"><![CDATA[<p><small>Oct 16, 18:09 UTC</small><br><strong>Postmortem</strong> - This incident has been resolved. Our Engineering team has finished documenting the Root Cause Analysis:
+
+[RCA for EU and US regions](https://cdn.auth0.com/blog/20191002-Incident-US-EU-RCA.pdf)
+
+[RCA for AU region](https://cdn.auth0.com/blog/20191002-Incident-AU-RCA.pdf)</p><p><small>Oct 2, 18:57 UTC</small><br><strong>Resolved</strong> - This incident has been resolved.</p><p><small>Oct 2, 18:54 UTC</small><br><strong>Monitoring</strong> - A fix has been implemented and we are monitoring the results.</p><p><small>Oct 2, 18:54 UTC</small><br><strong>Identified</strong> - The issue has been identified and a fix is being implemented.</p><p><small>Oct 2, 18:52 UTC</small><br><strong>Monitoring</strong> - A fix has been implemented and we are monitoring the results.</p><p><small>Oct 2, 18:51 UTC</small><br><strong>Identified</strong> - The issue has been identified and a fix is being implemented.</p><p><small>Oct 2, 18:38 UTC</small><br><strong>Investigating</strong> - Our user index processing pipeline is running behind. Queries to the Search API will return stale results until the system is caught up. We will post an update with an ETA as soon as possible.</p>]]></content>
+    </entry>
+</feed>
