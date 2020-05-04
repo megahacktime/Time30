@@ -256,7 +256,7 @@ INSERT INTO `jeugenio25_MegaTime30`.`TbMenu` (`Menu_BuscaTabela_id`, `Menu_Descr
 
 -- Cadastro de Configurações Formulário
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscaformularios` (`BuscaFormulario_BuscaTabela_id`,   `BuscaFormulario_tabela`, `BuscaFormulario_Descricao`) VALUES ('8',   'TbConfiguracoes', 'Configurações');
-INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`, `BuscaCampo_Disabled` ) VALUES ('1', '1', '6', 'Código', 'Configuracao_id', 1, 1);
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`, `BuscaCampo_Disabled` ) VALUES ('1', '1', '8', 'Código', 'Configuracao_id', 1, 1);
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('2', '1', '8', 'Nome', 'Configuracao_chave', 0);
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('2', '1', '8', 'Valor', 'Configuracao_valor', 0); 
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('2', '1', '8', 'Tipo', 'Configuracao_Tipo', 0); 
