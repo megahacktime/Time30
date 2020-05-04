@@ -17,8 +17,7 @@
             Diversidade canais
             Em nossa pesquisa percebemos que a quantidade de aplicativos era algo prejudicial
             Apenas informações importantes Apesar de nossa amostragem não ser tão abrangente, foi apontado por muitos entrevistados que a quantidade de informação apresentada muitas vezes os confundem.
-            </ol>
-            
+            </ol>            
         </div>
     </body>
 </html>
