@@ -1,6 +1,5 @@
 <html>
 <head>
-    <title>markdown-to-html-github-style</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -135,8 +134,7 @@
                 🔰 Raw HTML code for custom style 🔰
             </a>
         </h3>
-
-    </div>
+</div>
 
 </body>
 </html>
