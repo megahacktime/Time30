@@ -17,21 +17,28 @@ namespace Ideas.Dao.MySQL
         public MySqlDataReader Reader { get; set; }
         public MySqlDataAdapter Adapter { get; set; }
         public MySqlCommand Cmd { get; set; }
-        
-        
+
+
         /// <summary>
         /// Cria uma nova conexação com o MysqlServer.
         /// Caso queira reutilizar guarde a conexão em um objeto
         /// </summary>
-        public MySqlConnection GetConexao
+        public MySqlConnection GetConexao()
         {
-            get
-            {
-                _conn = new MySqlConnection(IdeasConfig.Default.MySQL);
-                MySqlConnection.ClearPool(_conn); // limpa o pool
-                _conn.Open();
-                return _conn;
-            }            
+
+            _conn = new MySqlConnection(IdeasConfig.Default.MySQL);
+            MySqlConnection.ClearPool(_conn); // limpa o pool
+            _conn.Open();
+            return _conn;
+
+
+            //get
+            //{
+            //    _conn = new MySqlConnection(IdeasConfig.Default.MySQL);
+            //    MySqlConnection.ClearPool(_conn); // limpa o pool
+            //    _conn.Open();
+            //    return _conn;
+            //}            
         }
 
         public DataTable ExecutarQuery(string SQL)
@@ -47,7 +54,7 @@ namespace Ideas.Dao.MySQL
         public DataTable Select(string Selecao)
         {
             DataTable dados = new DataTable();
-            MySqlConnection MsSQl = GetConexao;
+            MySqlConnection MsSQl = GetConexao();
             try
             {
                 MySqlCommand CMD = new MySqlCommand(Selecao, MsSQl);
@@ -75,7 +82,7 @@ namespace Ideas.Dao.MySQL
                 {
 
                     string Sql = query;
-                    MySqlConnection MsSQl = GetConexao;
+                    MySqlConnection MsSQl = GetConexao();
 
                     if (MsSQl.State != ConnectionState.Open)
                     {
@@ -144,7 +151,7 @@ namespace Ideas.Dao.MySQL
                             {
                                 foreach (var el in Enum.GetValues(pinfo.PropertyType))
                                 {
-                                    if(v is string && v.Equals(el.ToString()) || v is int && (int)v == (int)el )
+                                    if (v is string && v.Equals(el.ToString()) || v is int && (int)v == (int)el)
                                     {
                                         pinfo.SetValue(p, Convert.ChangeType(el, pinfo.PropertyType), null);
                                         break;
@@ -222,7 +229,7 @@ namespace Ideas.Dao.MySQL
             r = r || tp == typeof(long);
             r = r || tp == typeof(DateTime);
             r = r || tp == typeof(Nullable<DateTime>);
-            r = r || tp.IsEnum; 
+            r = r || tp.IsEnum;
             return r;
         }
 
@@ -299,7 +306,7 @@ namespace Ideas.Dao.MySQL
                 v = v.Substring(0, idxV).Insert(idxV, ")");
                 sql += v;
 
-                conn = GetConexao;
+                conn = GetConexao();
                 Cmd = new MySqlCommand(sql, conn);
                 foreach (MySqlParameter p in pts)
                 {
@@ -394,12 +401,12 @@ namespace Ideas.Dao.MySQL
                 v = v.Substring(0, idxV).Insert(idxV, ")");
                 sql += v;
 
-                conn = GetConexao;
+                conn = GetConexao();
                 Cmd = new MySqlCommand(sql, conn);
                 foreach (MySqlParameter p in pts)
                 {
                     Cmd.Parameters.Add(p);
-                }                
+                }
                 retorno = Cmd.ExecuteNonQuery();
                 // comando executado
                 if (retorno > 0)
@@ -460,7 +467,7 @@ namespace Ideas.Dao.MySQL
                                 foreach (var dc in value.ChaveEstrageira)
                                 {
                                     // se for -1 (atribuir null
-                                    if(dc.Value == -1)
+                                    if (dc.Value == -1)
                                     {
                                         sql += string.Format("{0}=@{1}, ", dc.Key, dc.Key);
                                         pts.Add(new MySqlParameter() { ParameterName = string.Format("@{0}", dc.Key), Value = DBNull.Value });
@@ -495,7 +502,7 @@ namespace Ideas.Dao.MySQL
                                     sql += string.Format("{0}=@{1},  ", value.getPrefixo() + properties[i].Name, properties[i].Name);
                                     pts.Add(new MySqlParameter() { ParameterName = string.Format("@{0}", properties[i].Name), Value = getValueOrDbNull(pVal) });
                                 }
-                                                                
+
                             }
                         }
                     }
@@ -517,7 +524,7 @@ namespace Ideas.Dao.MySQL
                     throw new Exception("Udate sem condição (where) não é permitdo");
                 }
 
-                conn = GetConexao;
+                conn = GetConexao();
                 Cmd = new MySqlCommand(sql, conn);
 
                 // adiciona os parâmentros internos
@@ -597,7 +604,7 @@ namespace Ideas.Dao.MySQL
                         else if (eUmTipoPrimitivo(tp))
                         {
                             //se for a chave primaria da tabela
-                            if(atributos.Length > 0 && atributos[0].eChavePrimaria)
+                            if (atributos.Length > 0 && atributos[0].eChavePrimaria)
                             {
                                 var val = properties[i].GetValue(value, null);
                                 // se não for null e não for 0, "", empty e false
@@ -607,11 +614,11 @@ namespace Ideas.Dao.MySQL
                                     pts.Add(new MySqlParameter() { ParameterName = string.Format("@{0}", properties[i].Name), Value = getValueOrDbNull(@properties[i].GetValue(value, null)) });
                                     temCondicao = true;
                                 }
-                            }                            
+                            }
                         }
                     }
                 }
-                conn = GetConexao;
+                conn = GetConexao();
                 Cmd = new MySqlCommand(sql, conn);
 
                 // adiciona os parâmentros internos
@@ -694,7 +701,7 @@ namespace Ideas.Dao.MySQL
                 if (orderBy != null) sql += string.Format(" ORDER BY {0} ", orderBy);
                 if (limit != null) sql += string.Format(" LIMIT {0}", limit);
 
-                conn = GetConexao;
+                conn = GetConexao();
                 Cmd = new MySqlCommand(sql, conn);
                 if (parametros != null)
                 {
@@ -771,7 +778,7 @@ namespace Ideas.Dao.MySQL
                 sql += string.Format("FROM {0} ", p.getNomeDaTabela());
                 if (where != null) sql += string.Format(" WHERE {0} ", where);
 
-                conn = GetConexao;
+                conn = GetConexao();
                 Cmd = new MySqlCommand(sql, conn);
                 if (parametros != null)
                 {
@@ -835,7 +842,7 @@ namespace Ideas.Dao.MySQL
                 if (where != null) sql += string.Format(" WHERE {0} ", where);
                 if (orderBy != null) sql += orderBy;
 
-                conn = GetConexao;
+                conn = GetConexao();
                 Cmd = new MySqlCommand(sql, conn);
                 if (parametros != null)
                 {
