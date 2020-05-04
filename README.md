@@ -1,15 +1,15 @@
 <html>
     <body>
-        # MEGAHACK 2.0
+        <h1>MEGAHACK 2.0</1>
 
-        > Muito prazer somos o time 30 - desafio Globo.<br/>
+        <blockote> Muito prazer somos o time 30 - desafio Globo.<br/>
         Cauê Buck, Fernando Ferreira, Jorge Eugenio, Pedro F. Oliveira e Victor Baptista. 
+        </blockote>
+        <h2>Desafio</h2>
 
-        ## Desafio
+        <p>Muitos serviços, muito conteúdo, mas como organizar a entrega e facilitar o acesso?</p>
 
-        Muitos serviços, muito conteúdo, mas como organizar a entrega e facilitar o acesso?
-
-        ## Solução
+        <h2>Solução</h2>
 
         <ol>
             <li>Human centered design</li>
