@@ -55,14 +55,12 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
               <tr>
                 <td>     
                     <h2>Por isso, criamos o GLOBO ONE.</h2>
+                    <p>A melhor oferta de conteúdo e interatividade na palma da sua mão.</p>
                 </td>
                 <td>
                   <img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/TelaInicial.png" />
                 </td>                
-              </tr>
-              <tr>
-                  <td colspan="2">A melhor oferta de conteúdo e interatividade na palma da sua mão.</td>
-              </tr>
+              </tr>              
             </table>
         </div>
     </body>
