@@ -99,9 +99,9 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
             </table>
             <h2>Material técnico</h2>
             <ul>
-                <li><a href="https://github.com/megahacktime/Time30/blob/master/BancoDedados/MerPDF.pdf">Modelo de entidade e relacionamentosDiagrama MER</a></li>
+                <li><a href="https://drive.google.com/file/d/1aYC3cHsU3WiBz3ZdnNQiuKi9xsnoKyIo/view">Modelo de entidade e relacionamentosDiagrama MER</a></li>
                 <p></p>
-                <li>Caso de uso</li>
+                <li><a href="">Caso de uso</li>
                 <li><a href="https://docs.google.com/presentation/d/17OK2EUvNzzJfy9N1Cd4MbJG3F6icQ8dEIc64aJbvLM0/edit#slide=id.gd251bb473_0_600">Apresentação</a></li>                
                 <li><a href="https://drive.google.com/open?id=18BpqFxz8KMd4yml68zlgrU1Po0lzgjVb">Vídeo (PITCH)</a></li>               
             </ul>
