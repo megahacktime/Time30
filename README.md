@@ -69,6 +69,14 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
                       <img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/MasOqueE.png" />
                   </td>
               </tr>
+                <tr>
+                    <td><img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/ComoFunciona.png" /></td>
+                    <td>
+                        <h2>Como funciona?</h2>
+                        <p>A utilização de uma inteligência artificial na aplicação, vem como grande diferencial, onde o usuário informará ao aplicativo qual a preferência de exibição</p>
+                        <p>Uma vez o processo concluído, utilizando de uma inteligência artificial,  o aplicativo aprenderá durante o uso, às preferências de exibição de conteúdo, proporcionando uma experiência incrível ao usuário.</p>
+                    </td>
+                </tr>
             </table>
         </div>
     </body>
