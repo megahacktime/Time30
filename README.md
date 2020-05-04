@@ -1,7 +1,6 @@
-# Markdown to GitHub style web
+# MEGAHACK 2.0
 
-> Because GitHub's `README` styling is actually really nice
-
+> Bem-vindos
 ## Background
 
 [![](https://img.shields.io/badge/author-@KrauseFx-blue.svg?style=flat)](https://twitter.com/KrauseFx)
