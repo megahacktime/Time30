@@ -88,8 +88,13 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <p>Ao mesmo tempo onde poderá estar pesquisando uma série no Globoplay, caso deseje, poderá ir diretamente ao G1, GloboEsporte ou qualquer outra aplicação Globo com apenas um clique.
+</p>
+                        <p>O projeto GLOBO ONE visa a interatividade e a subsequente captação de novos usuários, estimulando cada vez mais que seus usuários sintam-se à vontade com sua plataforma.
+</p>
+                    </td>
+                    <td><img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/Ultima.png" /></td>
                 </tr>
             </table>
         </div>
