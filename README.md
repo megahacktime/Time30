@@ -47,10 +47,7 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
              </ol>
             <p>
                 Alex e Marcela enfrentam um problema em comum, pouco tempo para se informar sobre notícias e entretenimento.
-            </p>
-            <strong>
-                Por isso, criamos o GLOBO ONE.
-            </strong>
+            </p>            
             <table>
               <tr>
                 <td>     
@@ -60,7 +57,18 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
                 <td>
                   <img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/TelaInicial.png" />
                 </td>                
-              </tr>              
+              </tr>     
+              <tr>
+                  <td>
+                      <h2>Mas o que é?</h2>
+                      <p>É uma aplicação construída com o objetivo de unificar os conteúdos ofertados pelas plataformas Globo.
+</p>
+                      <p>A necessidade de se ter um aplicativo para cada plataforma globo, desestimula o usuário na utilização, levando-os assim ao website. Porém, com o crescente aumento no número de celulares, o projeto visa oferecer a mesma interatividade, com conteúdo personalizado aos usuários em um único aplicativo, onde poderá realizar a navegação, visualizar todos os conteúdos de sua preferência, em um único lugar. </p>
+                  </td>
+                  <td>
+                      <img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/MasOqueE.png" />
+                  </td>
+              </tr>
             </table>
         </div>
     </body>
