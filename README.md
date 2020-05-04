@@ -4,7 +4,7 @@
     </head>
     <body>
         <div id='content'>
-            <h1>MEGAHACK 2.0</h1>
+            <h1>Mega Hack 2º Edição - Desafio Globo</h1>
             <blockquote>
                 <p>Muito prazer somos o time 30 - desafio Globo.<br/>
                 Cauê Buck, Fernando Ferreira, Jorge Eugenio, Pedro F. Oliveira e Victor Baptista.</p>
