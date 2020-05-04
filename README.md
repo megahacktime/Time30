@@ -13,7 +13,7 @@ Muitos serviços, muito conteúdo, mas como organizar a entrega e facilitar o ac
     <li>Human centered design</li>
 </ol>
 
-<bold>Com uma abordagem</bold> centrada no usuário procuramos verdadeiramente entender quais as maiores necessidades e dificuldades.
+<strong>Com uma abordagem</strong> centrada no usuário procuramos verdadeiramente entender quais as maiores necessidades e dificuldades.
 Diversidade canais
 Em nossa pesquisa percebemos que a quantidade de aplicativos era algo prejudicial
 Apenas informações importantes Apesar de nossa amostragem não ser tão abrangente, foi apontado por muitos entrevistados que a quantidade de informação apresentada muitas vezes os confundem.
