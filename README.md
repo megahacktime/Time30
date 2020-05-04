@@ -51,7 +51,7 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
             <strong>
                 Por isso, criamos o GLOBO ONE.
             </strong>
-            <img srg="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/TelaInicial.png" />
+            <img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/TelaInicial.png" />
         </div>
     </body>
 </html>
