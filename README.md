@@ -48,6 +48,9 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
             <p>
                 Alex e Marcela enfrentam um problema em comum, pouco tempo para se informar sobre notícias e entretenimento.
             </p>
+            <strong>
+                Por isso, criamos o GLOBO ONE.
+            </strong>
         </div>
     </body>
 </html>
