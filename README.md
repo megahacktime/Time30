@@ -60,22 +60,36 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
               </tr>     
               <tr>
                   <td>
+                      <img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/MasOqueE.png" />
+                  </td>
+                  <td>
                       <h2>Mas o que é?</h2>
                       <p>É uma aplicação construída com o objetivo de unificar os conteúdos ofertados pelas plataformas Globo.
 </p>
                       <p>A necessidade de se ter um aplicativo para cada plataforma globo, desestimula o usuário na utilização, levando-os assim ao website. Porém, com o crescente aumento no número de celulares, o projeto visa oferecer a mesma interatividade, com conteúdo personalizado aos usuários em um único aplicativo, onde poderá realizar a navegação, visualizar todos os conteúdos de sua preferência, em um único lugar. </p>
                   </td>
-                  <td>
-                      <img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/MasOqueE.png" />
-                  </td>
               </tr>
                 <tr>
-                    <td><img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/ComoFunciona.png" /></td>
                     <td>
                         <h2>Como funciona?</h2>
                         <p>A utilização de uma inteligência artificial na aplicação, vem como grande diferencial, onde o usuário informará ao aplicativo qual a preferência de exibição</p>
                         <p>Uma vez o processo concluído, utilizando de uma inteligência artificial,  o aplicativo aprenderá durante o uso, às preferências de exibição de conteúdo, proporcionando uma experiência incrível ao usuário.</p>
                     </td>
+                    <td><img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/ComoFunciona.png" /></td>
+                </tr>
+                <tr>
+                    <td><img src="https://github.com/megahacktime/Time30/blob/master/Apoio/ImagensReadme/ProximoEUtil.png" /></td>
+                    <td>
+                        <h2>Próximo e útil.</h2>
+                        <p>A necessidade de oferecer ao usuário a segurança e confiabilidade no aplicativo, nos remete a utilização de um layout fluído com tecnologia robusta, atendendo aos padrões de usabilidade e interface.
+</p>
+                        <p>Sendo assim, a personalização da experiência do usuário é um diferencial na aplicação, tornando-se individual, facilitando desta maneira, a obtenção de dados para ofertas de conteúdos, elevando assim os planos de assinaturas mensais.
+</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
                 </tr>
             </table>
         </div>
