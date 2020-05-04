@@ -36,6 +36,14 @@
 Ele adora jogar futebol, mas anda praticando pouco devido ao pouco tempo disponível que é dividido entre trabalho e estudos. Aproveita para se informar durante o deslocamento e por ter acompanhado sua mãe a vida toda, adora uma novela.
                       </p>
                   </blockquote>
+                 <li>Esta é a Marcela.
+                    <blockquote>
+                        <p>A quase um ano se tornou mãe da Priscila. 
+Hoje, divide uma rotina entre o trabalho como advogada e sua família. 
+                        </p>
+                        <p>É fã de séries e gosta acompanhar diariamente tudo o que acontece no mundo e no brasil, seja referente a economia, política ou novidades sobres seus artistas preferidos.</p>
+                    </blockquote>
+                 </li>
              </ol>
         </div>
     </body>
