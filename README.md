@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {background-color: powderblue;}
-h1   {color: blue;}
-p    {color: red;}
-</style>
-</head>
-<body>
-
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-
-</body>
-</html>
+<div>
+    <h1>MEGAHACK 2.0<h1>
+    <h2>TIME 30 - DESAFIO GLOBO</h2>
+</div>
