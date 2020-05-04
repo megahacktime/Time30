@@ -9,7 +9,7 @@ Muitos serviços, muito conteúdo, mas como organizar a entrega e facilitar o ac
 
 ## Solução
 
--1. Human centered design
+- Human centered design
 
 If you have a little side project, often you might want a simple landing page. The GitHub `README` rendering is really beautifully done: clean, simple and modern. The official [GitHub markdown to HTML API](https://developer.github.com/v3/markdown/) generates the HTML code, but not the stylesheets necessary to make it look nice.
 
