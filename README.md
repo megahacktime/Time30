@@ -9,9 +9,9 @@ Muitos serviços, muito conteúdo, mas como organizar a entrega e facilitar o ac
 
 ## Solução
 
-<ul>
+<ol>
     <li>Human centered design</li>
-</ul>
+</ol>
 
 Com uma abordagem centrada no usuário procuramos verdadeiramente entender quais as maiores necessidades e dificuldades.
 Diversidade canais
