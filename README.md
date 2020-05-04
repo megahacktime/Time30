@@ -1,6 +1,6 @@
 # MEGAHACK 2.0
 
-> Muito prazer somos o time 30 - desafio Globo.
+> Muito prazer somos o time 30 - desafio Globo.<br/>
 Cauê Buck, Fernando Ferreira, Jorge Eugenio, Pedro F. Oliveira e Victor Baptista. 
 
 ## Desafio
