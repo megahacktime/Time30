@@ -99,14 +99,13 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
             </table>
             <h2>Material técnico</h2>
             <ul>
-                <li>Diagrama MER</li>
-                <p><a href="https://github.com/megahacktime/Time30/blob/master/BancoDedados/MerPDF.pdf">Modelo de entidade e relacionamentos</a></p>
+                <li><a href="https://github.com/megahacktime/Time30/blob/master/BancoDedados/MerPDF.pdf">Modelo de entidade e relacionamentosDiagrama MER</a></li>
+                <p></p>
                 <li>Caso de uso</li>
-                <li>Apresentação</li>
-                <p><a href="https://docs.google.com/presentation/d/17OK2EUvNzzJfy9N1Cd4MbJG3F6icQ8dEIc64aJbvLM0/edit#slide=id.gd251bb473_0_600">Visualizar</a></p>
-                <li>Vídeo (PITCH)</li>
-                <p><a href=""></a></p>
+                <li><a href="https://docs.google.com/presentation/d/17OK2EUvNzzJfy9N1Cd4MbJG3F6icQ8dEIc64aJbvLM0/edit#slide=id.gd251bb473_0_600">Apresentação</a></li>                
+                <li><a href="#">Vídeo (PITCH)</a></li>               
             </ul>
+            <p>OBRIGADO! Grupo 30 - Desafio Globo</p>
         </div>
     </body>
 </html>
