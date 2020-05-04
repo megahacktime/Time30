@@ -107,6 +107,14 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
                 <li><a target="_blank" href="https://docs.google.com/presentation/d/17OK2EUvNzzJfy9N1Cd4MbJG3F6icQ8dEIc64aJbvLM0/edit#slide=id.gd251bb473_0_600">Apresentação</a> | <a href="https://github.com/megahacktime/Time30/blob/master/Documentacao/Apresentacao/Megahack%202.0.pdf">(PDF)</a></li>                
                 <li><a target="_blank" href="https://www.youtube.com/watch?v=jGKrBTATBeM">Vídeo (Pitch)</a></li>               
             </ul>
+           <h2>Arquitetura</h2>
+<p>A solução possui a seguinte Arquitetura:</p>
+           <ul>
+                <li>App -> Desenvolvido no framework IONIC com Angular.</li>
+                <li>Api -> Camada de serviço que fornece API acesso a dados e as lógicas de ordenação dos produtos exibidos no
+                    App.Solução</li>
+                <li>ADM - > Aplicação Web que utlizamos pra gerenciar a solução. Desevolvida em .NET C# (Netframework 4.7.2).</li>
+            </ul>
             <h3>Obrigado!</h3>
             <blockquote>
                 <p>Grupo 30 - Desafio Globo</p>
