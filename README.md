@@ -10,6 +10,8 @@
                 Cauê Buck, Fernando Ferreira, Jorge Eugenio, Pedro F. Oliveira e Victor Baptista.</p>
             </blockquote>
             <h2>Desafio</h2>
+            <p>"Engajamento dos usuários dos Aplicativos da Globo:</p>
+            <p>Como podermos ter a melhor experiência dos usuários com todos os produtos da Globo, sejam eles de consumo de vídeos, notícias, atualidades? Como podemos passar interatividade para esse usuário, sem ele ter que ficar abrindo diversos aplicativos para consumir conteúdos diferentes? Passando para ele uma experiência interativa, dinâmica, personalizada e que o faça querer ficar consumindo os nossos produtos na tela do seu celular."</p>
             <p>Muitos serviços, muito conteúdo, mas como organizar a entrega e facilitar o acesso?</p>       
             <h2>Solução</h2>
             <ul>
