@@ -11,6 +11,7 @@
             </blockquote>
             <h2>Desafio</h2>
             <p>Muitos serviços, muito conteúdo, mas como organizar a entrega e facilitar o acesso?</p>       
+            <h2>Solução</h2>
             <ol>
                 <li>Human centered design</li>
                 <strong>Com uma abordagem</strong> centrada no usuário procuramos verdadeiramente entender quais as maiores necessidades e dificuldades.
@@ -25,7 +26,8 @@
                         <strong>Apenas informações importantes</strong> Apesar de nossa amostragem não ser tão abrangente, foi apontado por muitos entrevistados que a quantidade de informação apresentada muitas vezes os confundem.
                     </li>
                 </ul>
-            </ol>            
+            </ol>
+            <p>Para tangibilizar nossa solução, procuramos focar em duas personas que construímos.</p>
         </div>
     </body>
 </html>
