@@ -7,6 +7,10 @@ Cauê Buck, Fernando Ferreira, Jorge Eugenio, Pedro F. Oliveira e Victor Baptist
 
 Muitos serviços, muito conteúdo, mas como organizar a entrega e facilitar o acesso?
 
+## Solução
+
+-1. Human centered design
+
 If you have a little side project, often you might want a simple landing page. The GitHub `README` rendering is really beautifully done: clean, simple and modern. The official [GitHub markdown to HTML API](https://developer.github.com/v3/markdown/) generates the HTML code, but not the stylesheets necessary to make it look nice.
 
 Using your GitHub `README` as the main landing point works great for open source projects, where your visitors are developers and are familiar with GitHub, as well as you have all the text right where the code, the Issues and PRs are. But for some projects this isn't ideal. I built this project within a few hours for myself to get [WalkWithFriends](https://walkwithfriends.net/) off the ground fast, without investing in building an actual website, or using a bloated website builder.
