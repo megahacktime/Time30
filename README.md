@@ -1,7 +1,9 @@
 # MEGAHACK 2.0
 
-> Bem-vindos
-## Background
+> Muito prazer somos o time 30 - desafio Globo.
+Cauê Buck, Fernando Ferreira, Jorge Eugenio, Pedro F. Oliveira e Victor Baptista. 
+
+## Desafio
 
 [![](https://img.shields.io/badge/author-@KrauseFx-blue.svg?style=flat)](https://twitter.com/KrauseFx)
 
