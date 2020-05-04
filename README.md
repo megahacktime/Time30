@@ -102,7 +102,7 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
             <h2>Material técnico</h2>
             <ul>
                 <li><a href="https://github.com/megahacktime/Time30/blob/master/Documentacao/ExemploNegocio/Megahack%20TIME%2030.pdf">Modelo de negócio</a></li>
-                <li><a target="_blank" href="https://drive.google.com/file/d/1aYC3cHsU3WiBz3ZdnNQiuKi9xsnoKyIo/view">Modelo de entidade e relacionamentos (MER)</a></li>
+                <li><a target="_blank" href="https://drive.google.com/file/d/1aYC3cHsU3WiBz3ZdnNQiuKi9xsnoKyIo/view">Diagrama de entidade e relacionamentos (DER)</a></li>
                 <li><a target="_blank" href="https://drive.google.com/file/d/1YFQ2X4ERLTUq5KbhcJm3EeqleHYQRR0c/view">Caso de uso</a></li>
                 <li><a target="_blank" href="https://docs.google.com/presentation/d/17OK2EUvNzzJfy9N1Cd4MbJG3F6icQ8dEIc64aJbvLM0/edit#slide=id.gd251bb473_0_600">Apresentação</a> | <a href="">(PDF)</a></li>                
                 <li><a target="_blank" href="https://www.youtube.com/watch?v=jGKrBTATBeM">Vídeo (Pitch)</a></li>               
