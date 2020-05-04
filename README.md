@@ -45,6 +45,9 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
                     </blockquote>
                  </li>
              </ol>
+            <p>
+                Alex e Marcela enfrentam um problema em comum, pouco tempo para se informar sobre notícias e entretenimento.
+            </p>
         </div>
     </body>
 </html>
