@@ -18,11 +18,11 @@
             Em nossa pesquisa percebemos que a quantidade de aplicativos era algo prejudicial
             Apenas informações importantes Apesar de nossa amostragem não ser tão abrangente, foi apontado por muitos entrevistados que a quantidade de informação apresentada muitas vezes os confundem.
                 <ul>
-                    <li>Diversidade canais
+                    <li><strong>Diversidade canais</strong>
                     Em nossa pesquisa percebemos que a quantidade de aplicativos era algo prejudicial
                     </li>
                     <li>
-                        Apenas informações importantes Apesar de nossa amostragem não ser tão abrangente, foi apontado por muitos entrevistados que a quantidade de informação apresentada muitas vezes os confundem.
+                        <strong>Apenas informações importantes</strong> Apesar de nossa amostragem não ser tão abrangente, foi apontado por muitos entrevistados que a quantidade de informação apresentada muitas vezes os confundem.
                     </li>
                 </ul>
             </ol>            
