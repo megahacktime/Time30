@@ -1,0 +1,126 @@
+﻿@*@model System.Data.DataTable
+
+    @{
+        System.Data.DataRowCollection Linhas = Model.Rows;
+        System.Data.DataColumnCollection Colunas = Model.Columns;
+        ViewBag.Title = "Listar";
+
+    }*@
+
+
+@model  Erp.ControleListaDePaginas
+
+@{
+    System.Data.DataRowCollection Linhas = Model.Listagem.DadosApresentacao.Rows;
+    System.Data.DataColumnCollection Colunas = Model.Listagem.DadosApresentacao.Columns;
+    ViewBag.Title = "Listar";
+
+}
+
+<h4>>@Model.Listagem.Titulo</h4>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="container">
+            <div class="row">
+
+                <form method="post" enctype="application/x-www-form-urlencoded">
+
+                    <div class="col-md-4">
+                        <span class="text-secondary">  Campo </span>
+                        <select name='comboPesquisa' class="form-control">
+                            @foreach (System.Data.DataColumn col in Colunas)
+                            {
+                                <option value='@col.ColumnName.ToString()' @Html.Raw(col.ColumnName.ToString() == Model.Listagem.CampoPesquisa ? "selected" : "")>@col.Caption.ToString()</option>
+
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+
+                        <span class="text-secondary"> Valor </span>
+                        <input type="text" name='txtFiltro' class="form-control" value='@Model.Listagem.ValorBusca ' placeholder="ValorPesquisa" />
+
+                    </div>
+
+                    <div class="col-md-2">
+                        <br />
+
+                        <input type="submit" name='Pesquisar' class="btn btn-success" value="Pesquisar" />
+
+                    </div>
+                    <div class="col-md-1">
+                        <br />
+                        <a class="btn btn-primary" href="~/formulario/cadastro/@Model.Listagem.TabelaBanco">Cadastrar</a>
+                   </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel-body">
+    <table class="table">
+        <thead>
+            <tr>
+                @foreach (System.Data.DataColumn coluna in Colunas)
+                {
+                    <th>@coluna.Caption</th>
+                }
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Linhas != null && Linhas.Count > 0)
+            {
+                foreach (System.Data.DataRow linha in Linhas)
+                {
+                    <tr>
+                        @foreach (System.Data.DataColumn coluna in Colunas)
+                        {
+                            <td>@linha[coluna].ToString()</td>
+                        }
+                        <td><a class="btn btn-primary" href="~/formulario/cadastro/@Model.Listagem.TabelaBanco-@linha[0]">editar</a></td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+
+
+                <td colspan="8">
+                    @Html.Partial("_Paginacao", (ErpWeb.Models.PaginacaoModel)ViewBag.Paginacao)
+                </td>
+            </tr>
+
+            @*<tr>
+
+
+            <td colspan="8">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">2 <span class="sr-only">(atual)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Próximo</a>
+                        </li>
+                    </ul>
+                </nav>
+            </td>
+        </tr>*@
+        </tfoot>
+    </table>
+
+</div>
+<div class="panel-footer">
+    <span class="badge">@Model.Listagem.DadosApresentacao.Rows.Count</span><span> @Html.Raw(Model.Listagem.DadosApresentacao.Rows.Count > 1 ? "registros" : "registro")</span>
+</div>
+
+

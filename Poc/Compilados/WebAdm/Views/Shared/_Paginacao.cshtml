@@ -1,0 +1,33 @@
+﻿@model  ErpWeb.Models.PaginacaoModel
+
+@if (Model.TotalPaginas > 1)
+{
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item"><span class="paginas">Pág @Model.PaginaAtual de  @Model.TotalPaginas</span></li>
+            @if (Model.PossuiAnterior)
+            {
+                <li class="page-item"><a class="page-link" href="@Model.Link - @(Model.PaginaAtual - 1)">  ◄ </a></li>
+            }
+
+            @for (int c = Model.Inicio; c <= Model.Final; c++)
+            {
+                if (c == Model.PaginaAtual)
+                {
+                    <li class="page-item active"><a class="active" href="#">@c.ToString()</a></li>
+
+                }
+                else
+                {
+                    <li class="page-item"><a href="@Model.Link-@c.ToString()">@c.ToString()</a></li>
+
+                }
+            }
+
+            @if (Model.PossuiProxima)
+            {
+                <li class="page-item"><a class="page-link" href="@Model.Link-@(Model.PaginaAtual + 1)"> ► </a></li>
+            }
+        </ul>
+    </nav>
+}
