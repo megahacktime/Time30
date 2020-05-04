@@ -63,6 +63,9 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
                   <img src="demo/screenshot3_framed.jpg">
                 </td>
               </tr>
+              <tr>
+                  <td colspan="3">A melhor oferta de conteúdo e interatividade na palma da sua mão.</td>
+              </tr>
             </table>
         </div>
     </body>
