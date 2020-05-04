@@ -16,7 +16,7 @@ INSERT INTO `jeugenio25_MegaTime30`.`TbConfiguracoes` (  `Configuracao_chave` , 
 INSERT INTO `jeugenio25_MegaTime30`.`TbConfiguracoes` (  `Configuracao_chave` , `Configuracao_valor` , `Configuracao_Data`) VALUES ( 'QtdItensPorPaginas' , '10', current_timestamp());
 INSERT INTO `jeugenio25_MegaTime30`.`TbConfiguracoes` (  `Configuracao_chave` , `Configuracao_valor` , `Configuracao_Data`) VALUES ( 'MensagemBemvindo' , ' ADM TIME 30 - DESAFIO GLOBO - Sistema de Gestão de Usuários ', current_timestamp());
 INSERT INTO `jeugenio25_MegaTime30`.`TbConfiguracoes` (  `Configuracao_chave` , `Configuracao_valor` , `Configuracao_Data`) VALUES ( 'URLRaizImagem' , 'http://ideiaspara.com.br/Time30Api/Imagens/', current_timestamp());
-
+INSERT INTO `jeugenio25_MegaTime30`.`TbConfiguracoes` (  `Configuracao_chave` , `Configuracao_valor` , `Configuracao_Data`) VALUES ( 'QtdProdutosListar' , '7', current_timestamp());
 
 -- Icones
 INSERT INTO `jeugenio25_MegaTime30`.`TbIcones` (`Icone_Icone`) VALUES ('ND');
@@ -43,6 +43,8 @@ INSERT INTO `jeugenio25_MegaTime30`.`TbConfiguracoes` ( `Configuracao_chave` , `
 INSERT INTO `jeugenio25_MegaTime30`.`TbConfiguracoes` ( `Configuracao_chave` , `Configuracao_valor` , `Configuracao_Data`) VALUES ( 'CampoIdLogin' , 'Usuario_id', current_timestamp());
 INSERT INTO `jeugenio25_MegaTime30`.`TbConfiguracoes` ( `Configuracao_chave` , `Configuracao_valor` , `Configuracao_Data`) VALUES ( 'CampoNomeLogin' , 'Usuario_Nome', current_timestamp());
 
+
+
 INSERT INTO `jeugenio25_MegaTime30`.`TbControleHTML` (`ControleHTML_Nome`) VALUES ('ND');
 INSERT INTO `jeugenio25_MegaTime30`.`TbControleHTML` (`ControleHTML_Nome`) VALUES ('text');
 INSERT INTO `jeugenio25_MegaTime30`.`TbControleHTML` (`ControleHTML_Nome`) VALUES ('radio');
@@ -58,10 +60,6 @@ INSERT INTO `jeugenio25_MegaTime30`.`TbTipoDado` (`TipoDado_Nome`) VALUES ('int'
 INSERT INTO `jeugenio25_MegaTime30`.`TbTipoDado` (`TipoDado_Nome`) VALUES ('DateTime');
 INSERT INTO `jeugenio25_MegaTime30`.`TbTipoDado` (`TipoDado_Nome`) VALUES ('Double');
  
-
-
-
-
 
 
 -- Menus Principais
@@ -241,6 +239,29 @@ INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('2', '1', '7', 'Nome', 'Cidade_Nome', 0);
 INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_FonteDados` , `BuscaCampo_Echave`, `BuscaCampo_Obrigatorio`) VALUES ('4', '1', '7', 'Estado', 'Cidade_Estado_id', ' select  Estado_id ,  Estado_Nome from    TbEstados where _deleted_ = 0 ',  0, 1); 
  
+
+
+
+-- Configuracoes  
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscatabelas` (`BuscaTabela_Perfil_Id`, `BuscaTabela_tabela`, `BuscaTabela_Descricao`, `BuscaTabela_condicao` , `_deleted_`) VALUES ('1', 'TbConfiguracoes mn', 'Configurações', 'mn._deleted_ = 0', 0);
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_BuscaTabela_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('1', '1', '8', 'Código', 'Configuracao_id', b'1');
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_BuscaTabela_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('1', '1', '8', 'Chave', 'Configuracao_Chave', b'1');
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_BuscaTabela_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('1', '1', '8', 'Valor', 'Configuracao_Valor', b'1');
+
+
+-- Cadastro de Configurações Menu
+INSERT INTO `jeugenio25_MegaTime30`.`TbMenu` (`Menu_BuscaTabela_id`, `Menu_Descricao`, `Menu_Principal`, `_deleted_`, `Menu_Ordem`, `Menu_ClasseIcone` , `Menu_Menu_id`    ) VALUES (8, 'Configuracoes', 0, 0, 1, 'glyphicon glyphicon-th',1 );
+
+
+
+-- Cadastro de Configurações Formulário
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscaformularios` (`BuscaFormulario_BuscaTabela_id`,   `BuscaFormulario_tabela`, `BuscaFormulario_Descricao`) VALUES ('8',   'TbConfiguracoes', 'Configurações');
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`, `BuscaCampo_Disabled` ) VALUES ('1', '1', '6', 'Código', 'Configuracao_id', 1, 1);
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('2', '1', '8', 'Nome', 'Configuracao_chave', 0);
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('2', '1', '8', 'Valor', 'Configuracao_valor', 0); 
+INSERT INTO `jeugenio25_MegaTime30`.`Tbbuscacampos` (`BuscaCampo_ControleHTML_id`, `BuscaCampo_TipoDado_id`, `BuscaCampo_buscaformulario_id`, `BuscaCampo_CampoDescricao`, `BuscaCampo_NomeCampo`, `BuscaCampo_Echave`) VALUES ('2', '1', '8', 'Tipo', 'Configuracao_Tipo', 0); 
+
+
 
 
 

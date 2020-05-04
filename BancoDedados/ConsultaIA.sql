@@ -3,7 +3,7 @@
 	inner join (
 	select LogUso_Usuario_id,  LogUso_Produto_id    ,    count(0) QtdUsos FROM TbLogUso lg
 	where  lg.LogUso_Usuario_id =1 
-    -- lg.LogUso_Usuario_id = @Usuario_id 
+    -- lg.LogUso_Usuario_id = 2
     group by LogUso_Usuario_id,  LogUso_Produto_id 
 	) a on LogUso_Produto_id = Produto_id    order by QtdUsos desc
 ) Cb
