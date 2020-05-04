@@ -9,7 +9,15 @@ Muitos serviços, muito conteúdo, mas como organizar a entrega e facilitar o ac
 
 ## Solução
 
-- Human centered design
+<ul>
+    <li>Human centered design</li>
+</ul>
+
+Com uma abordagem centrada no usuário procuramos verdadeiramente entender quais as maiores necessidades e dificuldades.
+Diversidade canais
+Em nossa pesquisa percebemos que a quantidade de aplicativos era algo prejudicial
+Apenas informações importantes Apesar de nossa amostragem não ser tão abrangente, foi apontado por muitos entrevistados que a quantidade de informação apresentada muitas vezes os confundem.
+
 
 If you have a little side project, often you might want a simple landing page. The GitHub `README` rendering is really beautifully done: clean, simple and modern. The official [GitHub markdown to HTML API](https://developer.github.com/v3/markdown/) generates the HTML code, but not the stylesheets necessary to make it look nice.
 
