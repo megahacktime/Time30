@@ -115,6 +115,17 @@ Hoje, divide uma rotina entre o trabalho como advogada e sua família.
                     App.Solução</li>
                 <li>ADM - > Aplicação Web que utlizamos pra gerenciar a solução. Desevolvida em .NET C# (Netframework 4.7.2).</li>
             </ul>
+             <h2>Material para Teste</h2>
+             <p>Para testar a solução, utilizem os componentes abaixo:</p>
+              <blockquote>
+                  <p>Login: megahacktime@gmail.com<br/>Senha: 1234</p>
+               </blockquote>            
+             <ul>
+                <li> App -> <a href="https://github.com/megahacktime/Time30/blob/master/Poc/Compilados/App/GloboOneV1.apk">Link</a>                    </li>
+                <li> Api -> <a href="http://www.ideiaspara.com.br/time30Api/">Link</a></li>
+                 <li> Adm -> <a href="http://www.ideiaspara.com.br/Time30ADM/">Link</a>                    
+                 </li>                 
+             </ul>
             <h3>Obrigado!</h3>
             <blockquote>
                 <p>Grupo 30 - Desafio Globo</p>
